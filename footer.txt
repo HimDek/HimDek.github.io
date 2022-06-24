@@ -1,0 +1,5 @@
+<div>
+<h2>Did you like my Website?</h2>
+<p>You can make one for yourself</p>
+<a class="nodeclink" href="https://github.com/HiDe-Techno-Tips/HiDe-Techno-Tips.github.io"><button class="icontext"><img src="https://github.com/HiDe-Techno-Tips/HiDe-Techno-Tips.github.io/raw/main/assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">View its Source Code</button></a>
+</div>
