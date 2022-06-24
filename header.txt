@@ -1,0 +1,6 @@
+<div>
+<a style="text-decoration: none; color: white" href="https://www.youtube.com/channel/UCy3fBVKd0RMY05CgiiuGqSA?sub_confirmation=1" target="_blank">
+<img style="box-shadow: 5px 5px 20px #f6ed25, -5px -5px 20px #02d1c0, 5px -5px 20px #56db8b, -5px 5px 20px #b9e64c; border-radius: 50%; margin-top: 15px;" src="https://lh3.googleusercontent.com/-dI3wBgesbvc/X5zwwBSbQAI/AAAAAAAAAA0/b4faUxUwAsIn9ron-uEBxTO1sVnzwNOVACEwYBhgLKtgDAL1Ocqzo4ufQvzjl9uPj0HOl9NGI3v8TBfQOnCGDyag03_6lb2Xh80ojLZ-qvKS10FfmjxCamlFBXeKMR53-hE8M34tJJoUq76BSbV3KqJOkqTHuHSiiqMVMD7ZeZvPHxk6AYYT3bvy4IBN9BF7yBR10pubzpFY-EptDGxHnmXNxQE8lBnUsn5RiuhfmebQXp8vA0nHqYLewbkjdayPILYpcTJ7iZwVDAHCbPG2qQxsmzLuUwHsaA-8TTeSoHEechbFeCWMAgtj22k4gGfCKftYLSX1KpblPic0k7Wkft1EOhHOV-OK1-YkKvmRFZj5pD4IE3eP0TboIyjG7ROTawSQqgnTDHKON30vuwii-1jANSycsPke1_VXYMTbJmbH21HslKh6Uef8xCccgOrYKs1cXqGEwITv-DMmBMdvJqE0AO20_cCsbMKuRrtu4F54eYgNIbZ3j6jq38WaHbu_u28FUA04x5JhX3-WQ3R9tJiPauxX0fX12A_BiOTIyGO0OIkKl_-YusBzHJJDr4BVubBCN6fwJXB9a9NZ6pBYtXtPa2BX7IPVYQPUtI04Owmkee_erjMzOJQYMkrS9dLASkBzJmLOQ8AwokWXCC3_USThmcjGNFNJC9DDP6ryFBg/w140-h140-p/2020-10-30.png">
+<p style="font-size: 35px;text-shadow: 0px 0px 15px #fcef23, 0px 0px 20px #77df76, 0px 0px 40px #79ebf5;"><b>HiDe Techno Tips</b></p>
+</a>
+</div>
