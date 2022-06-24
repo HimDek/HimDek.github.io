@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: himdek.com
+Token: b4ab7b26013c91b131abb22c2d29f4a1d25955861e0b4ab30d5c7bf045f6efdb
