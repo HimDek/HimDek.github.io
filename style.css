@@ -24,10 +24,6 @@ pre {
   overflow: auto;
 }
 
-p {
-  color: #8b949e;
-}
-
 svg {
   display: inline-block;
   vertical-align: middle;
