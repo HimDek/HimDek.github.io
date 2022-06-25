@@ -57,7 +57,7 @@ fetch("header.txt").then(function(response) {
 <div id="repostab" class="tabcontent">
 	<div style="text-align: center; margin-top: 20px;">
 		<a href="https://github.com/HimDek?tab=repositories">
-			<img height="50px" src="https://img.shields.io/badge/GitHub-View%20all%20Repositories-informational?style=for-the-badge&logo=github&color=grey" />
+			<img height="40px" src="https://img.shields.io/badge/GitHub-View%20all%20Repositories-informational?style=for-the-badge&logo=github&color=grey" />
 		</a>
 	</div>
 </div>
@@ -65,7 +65,7 @@ fetch("header.txt").then(function(response) {
 <div id="giststab" class="tabcontent">
 	<div style="text-align: center; margin-top: 20px;">
 		<a href="https://gist.github.com/HimDek">
-			<img height="50px" src="https://img.shields.io/badge/Gist-View%20all%20Gists-informational?style=for-the-badge&logo=github&color=grey" />
+			<img height="40px" src="https://img.shields.io/badge/Gist-View%20all%20Gists-informational?style=for-the-badge&logo=github&color=grey" />
 		</a>
 	</div>
 </div>
@@ -92,8 +92,8 @@ listgists("HimDek", document.getElementById("giststab")).then(gistscount => {
 </script>
 
 <div id="donatetab" class="tabcontent">
-	<div style="padding: 10px 30px; color: #8b949e">
-            	<b style="font-size:25px; margin: 10px 0px;">Like my work?</b>
+	<div>
+            	<h1>Like my work?</h1>
 		<p>Show your appreciation and support by donateing any amount of your choice. Your Love and Support is extremely important for me to help me continue my work and keep its access free for all.</p>
 	</div>
 	<form style="text-align: center; margin: 0px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IVdwWFLAhvW3qO" async></script></form>
@@ -130,10 +130,6 @@ listgists("HimDek", document.getElementById("giststab")).then(gistscount => {
         			<img height=35px style="margin: 5px;" src="assets/JioMoney.png"></img>
     			</div>
 		</div>
-	</div>
-	<div class="box">
-		<p style="font-size:20px;"><b>Why donate?</b></p>
-		<p>By donating, you make sure that my work always stays free for everyone and never goes behind a subscription wall.</p>
 	</div>
 </div>
 
