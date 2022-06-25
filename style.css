@@ -19,6 +19,10 @@ h1 {
   color: #2f80ed;
 }
 
+h2 {
+  color: #2f80ed;
+}
+
 pre {
   width: auto;
   overflow: auto;
@@ -28,7 +32,6 @@ svg {
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
-  color: #2f80ed;
 }
 
 button svg {
@@ -77,6 +80,7 @@ button {
   border: none;
   cursor: pointer;
   background-color: #dfdfdf;
+  color: #2f80ed;
 }
 
 button:not(.active):not(.activetab):not(.tablinks):hover {
@@ -103,6 +107,10 @@ header {
   padding-bottom: 30px;
 }
 
+header button, footer button {
+  color: buttontext;
+}
+
 header div, footer div {
   display: inline-flex;
 }
@@ -126,6 +134,7 @@ header div div, footer div div {
   float: left;
   padding: 9px;
   font-size: 18px;
+  color: buttontext;
 }
 
 .tab button:not(.activetab):not(.active):hover {
