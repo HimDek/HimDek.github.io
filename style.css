@@ -42,7 +42,7 @@ svg {
 
 button svg {
   margin-right: 5px;
-  fill: buttontext
+  fill: #434d58;
 }
 
 img {
@@ -69,20 +69,6 @@ a p:hover {
   text-shadow: none;
 }
 
-.nodeclink:hover {
-  text-shadow: none;
-}
-
-.button {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.button:hover {
-  -webkit-filter: drop-shadow(0px 0px 10px #2f80ed);
-  filter: drop-shadow(0px 0px 10px #2f80ed);
-}
-
 button {
   border: none;
   cursor: pointer;
@@ -98,13 +84,6 @@ button.active {
   text-decoration: underline;
 }
 
-button.icontext {
-  display: inline-flex;
-  align-items: center; 
-  font-size: 16px;
-  padding: 6px;
-}
-
 header, footer {
   background-color: #dfdfdf;
   text-align: center;
@@ -112,10 +91,6 @@ header, footer {
 
 header {
   padding-bottom: 30px;
-}
-
-header button, footer button {
-  color: buttontext;
 }
 
 header div, footer div {
