@@ -242,6 +242,11 @@ header div div, footer div div {
   margin: 20px;
 }
 
+.content {
+  padding: 10px;
+  margin: 20px;
+}
+
 a .box
 {
   padding-bottom: 25px;
