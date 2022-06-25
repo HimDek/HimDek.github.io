@@ -28,7 +28,6 @@ p {
 }
 
 svg {
-  fill: #8b949e;
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
@@ -269,7 +268,6 @@ a .box
 
 .stats *:not(svg) {
   vertical-align: bottom;
-  color: #8b949e;
   margin: 5px;
 }
 
