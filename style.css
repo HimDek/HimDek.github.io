@@ -8,6 +8,7 @@ body {
   color: black;
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://himdek.github.io/assets/background.jpg");
 }
 
 .invisible {
@@ -250,7 +251,7 @@ header div div, footer div div {
 
 .main {
   padding: 10px;
-  margin: 80px;
+  margin: 120px;
 }
 
 a .box
