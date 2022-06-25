@@ -206,6 +206,12 @@ header div div, footer div div {
     -webkit-transform: rotate(45deg) translate(-6px, -7px);
     transform: rotate(45deg) translate(-6px, -7px);
   }
+  
+  .main {
+    padding: 10px;
+    margin: 20px;
+  }
+
 
 }
 
@@ -242,9 +248,9 @@ header div div, footer div div {
   margin: 20px;
 }
 
-.content {
+.main {
   padding: 10px;
-  margin: 20px;
+  margin: 80px;
 }
 
 a .box
@@ -286,27 +292,6 @@ a .box
 
 .buttons {
   display: block;
-}
-
-@media screen and (max-width: 600px) {
-
-  .controls {
-    display: block;
-  }
-  
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 750px) {
-
-  .row {
-    display: block;
-  }
-  
 }
 
 table {
