@@ -52,8 +52,6 @@ fetch("header.txt").then(function(response) {
 
 <div id="hometab" class="tabcontent">
 	<div id="intro"></div>
-	<p style="margin: 0px 20px; margin-top: 20px; margin-bottom: -15px;">Pinned</p>
-	<div id="pin" style="text-align: center;"></div>
 </div>
 
 <div id="repostab" class="tabcontent">
@@ -81,19 +79,7 @@ fetch("HimDek/README.md").then(function(response) {
 </script>
 	
 <script>
-pinElement = document.getElementById("pin");
-
-gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-Windows", "repo", pinElement);
-gitpin("https://api.github.com/repos/HimDek/Windows-Activator", "repo", pinElement);
-gitpin("https://api.github.com/repos/HimDek/Mouse2Gamepad_for_Yuzu", "repo", pinElement);
-gitpin("https://api.github.com/repos/HiDe-Techno-Tips/yuzu-Early-Access-Launcher", "repo", pinElement);
-
-gitpin("https://api.github.com/gists/49a3cd23e9a931eb8920423a0fb3668a", "gist", pinElement);
-gitpin("https://api.github.com/gists/e09340eae2861e1ad8b7f6bdba5ee9ff", "gist", pinElement);
-gitpin("https://api.github.com/gists/eb8704e2da1d98240153165743960e17", "gist", pinElement);
-
 const loaded = new Event("loaded");
-
 listrepos("HimDek", document.getElementById("repostab")).then(reposcount => {
 	document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + reposcount.toString() + "</span>";
 	document.dispatchEvent(loaded);
