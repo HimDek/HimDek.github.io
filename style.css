@@ -14,13 +14,17 @@ body {
   display: none;
 }
 
+h1 {
+  text-align: center;
+}
+
 pre {
   width: auto;
   overflow: auto;
 }
 
-h1 {
-  text-align: center;
+p {
+  color: #8b949e;
 }
 
 svg {
@@ -34,18 +38,14 @@ button svg {
   margin-right: 5px;
 }
 
-a {
+a:not(p) {
   transition: 0.3s;
   text-decoration: none;
   color: #58a6ff;
 }
 
-a:hover {
+a:not(p):hover {
   text-shadow: 0px 0px 10px #58a6ff;
-}
-
-a p {
-  text-shadow: none;
 }
 
 .nodeclink:hover {
@@ -53,8 +53,6 @@ a p {
 }
 
 .button {
-  -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
-  filter: drop-shadow(0px 0px 10px #ffffff);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -257,10 +255,6 @@ a .box
 
 .box div {
   margin: 5px;
-}
-
-.box p {
-  color: #8b949e;
 }
 
 .controls {
