@@ -33,6 +33,10 @@ button svg {
   margin-right: 5px;
 }
 
+img {
+  background-color: #dfdfdf;
+}
+
 a:not(p) {
   transition: 0.3s;
   text-decoration: none;
