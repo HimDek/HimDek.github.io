@@ -5,7 +5,7 @@
 body {
   margin: 0px;
   min-width: 350px;
-  color: black;
+  color: #9a9ca1;
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,17 +34,27 @@ button svg {
 }
 
 img {
+  margin: 20px;
   background-color: #dfdfdf;
 }
 
-a:not(p) {
+a {
   transition: 0.3s;
   text-decoration: none;
   color: #58a6ff;
 }
 
-a:not(p):hover {
+a:hover {
   text-shadow: 0px 0px 10px #58a6ff;
+}
+
+a p {
+  text-decoration: none;
+  color: #9a9ca1;
+}
+
+a p:hover {
+  text-shadow: none;
 }
 
 .nodeclink:hover {
@@ -145,16 +155,12 @@ header div div, footer div div {
   vertical-align: middle;
   font-size: 12px;
   display: inline-block;
-  background-color: #343942;
+  background-color: #9a9ca1;
   border-radius: 10px;
   padding: 3px;
   padding-left: 7px;
   padding-right: 7px;
   color: white;
-}
-
-.tab button.active span, .tab button.activetab span {
-  background-color: #161b22;
 }
 
 @media screen and (max-width: 700px) {
@@ -234,13 +240,14 @@ header div div, footer div div {
 .bar1, .bar2, .bar3 {
   width: 30px;
   height: 5px;
-  background-color: #8b949e;
+  background-color: #9a9ca1;
   margin: 4px;
   transition: 0.4s;
   border-radius: 3px;
 }
 
 .box {
+  background-color: #dfdfdf;
   transition: 0.3s;
   padding: 25px;
   padding-bottom: 20px;
@@ -282,7 +289,7 @@ a .box
 }
 
 .stats a {
-  color: #8b949e;
+  color: #9a9ca1;
 }
 
 .stats a:hover {
@@ -294,19 +301,19 @@ a .box
 }
 
 table {
-  border: 2px solid #8b949e;
+  border: 2px solid #9a9ca1;
   border-collapse: collapse;
   margin: 30px;
 }
 
 th {
-  border: 2px solid #8b949e;
+  border: 2px solid #9a9ca1;
   text-align: center;
   padding: 5px;
 }
 
 td {
-  border: 1px solid #8b949e;
+  border: 1px solid #9a9ca1;
   text-align: left;
   padding: 5px;
 }
