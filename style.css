@@ -8,6 +8,7 @@ body {
   color: #434d58;
   background-color: #ffffff;
   font-family: 'Segoe UI', Ubuntu, Sans-Serif;
+  font-size: 16;
 }
 
 .invisible {
@@ -23,6 +24,10 @@ h2 {
   color: #2f80ed;
 }
 
+h3 {
+  color: #2f80ed;
+}
+
 pre {
   width: auto;
   overflow: auto;
@@ -32,10 +37,12 @@ svg {
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
+  fill: #2f80ed;
 }
 
 button svg {
   margin-right: 5px;
+  fill: buttontext
 }
 
 img {
