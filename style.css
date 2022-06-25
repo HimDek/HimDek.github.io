@@ -3,6 +3,7 @@
 }
 
 body {
+  margin: 0px;
   min-width: 350px;
   color: black;
   background-color: #ffffff;
@@ -91,6 +92,7 @@ header, footer {
 
 header {
   padding-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -255,6 +257,10 @@ a .box
 
 .box div {
   margin: 5px;
+}
+
+.box p {
+  color: #8b949e;
 }
 
 .controls {
