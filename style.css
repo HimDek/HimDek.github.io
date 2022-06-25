@@ -5,7 +5,7 @@
 body {
   margin: 0px;
   min-width: 350px;
-  color: #9a9ca1;
+  color: #434d58;
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,6 +16,7 @@ body {
 
 h1 {
   text-align: center;
+  color: #2f80ed;
 }
 
 pre {
@@ -41,16 +42,16 @@ img {
 a {
   transition: 0.3s;
   text-decoration: none;
-  color: #3080ed;
+  color: #2f80ed;
 }
 
 a:hover {
-  text-shadow: 0px 0px 10px #3080ed;
+  text-shadow: 0px 0px 10px #2f80ed;
 }
 
 a p {
   text-decoration: none;
-  color: #9a9ca1;
+  color: #434d58;
 }
 
 a p:hover {
@@ -67,8 +68,8 @@ a p:hover {
 }
 
 .button:hover {
-  -webkit-filter: drop-shadow(0px 0px 10px #3080ed);
-  filter: drop-shadow(0px 0px 10px #3080ed);
+  -webkit-filter: drop-shadow(0px 0px 10px #2f80ed);
+  filter: drop-shadow(0px 0px 10px #2f80ed);
 }
 
 button {
@@ -155,7 +156,7 @@ header div div, footer div div {
   vertical-align: middle;
   font-size: 12px;
   display: inline-block;
-  background-color: #9a9ca1;
+  background-color: #434d58;
   border-radius: 10px;
   padding: 3px;
   padding-left: 7px;
@@ -240,7 +241,7 @@ header div div, footer div div {
 .bar1, .bar2, .bar3 {
   width: 30px;
   height: 5px;
-  background-color: #9a9ca1;
+  background-color: #434d58;
   margin: 4px;
   transition: 0.4s;
   border-radius: 3px;
@@ -289,11 +290,11 @@ a .box
 }
 
 .stats a {
-  color: #9a9ca1;
+  color: #434d58;
 }
 
 .stats a:hover {
-  color: #3080ed;
+  color: #2f80ed;
 }
 
 .buttons {
@@ -301,19 +302,19 @@ a .box
 }
 
 table {
-  border: 2px solid #9a9ca1;
+  border: 2px solid #434d58;
   border-collapse: collapse;
   margin: 30px;
 }
 
 th {
-  border: 2px solid #9a9ca1;
+  border: 2px solid #434d58;
   text-align: center;
   padding: 5px;
 }
 
 td {
-  border: 1px solid #9a9ca1;
+  border: 1px solid #434d58;
   text-align: left;
   padding: 5px;
 }
