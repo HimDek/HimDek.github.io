@@ -3,6 +3,7 @@
 <title>HimDek</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://gitlist.himdek.com/GitHubList.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +11,7 @@
 
 <body>
 <header>
-<div id = "header"></div><br />
-<script src="https://apis.google.com/js/platform.js"></script>
-<div class="g-ytsubscribe" data-channelid="UCy3fBVKd0RMY05CgiiuGqSA" data-layout="" data-count="default"></div>
+<div id="header"></div><br />
 </header>
 <script>
 fetch("header.txt").then(function(response) {
@@ -52,7 +51,8 @@ fetch("header.txt").then(function(response) {
 </div>
 
 <div id="hometab" class="tabcontent">
-    <p style="margin: 0px 20px; margin-top: 20px; margin-bottom: -15px;">Pinned</p>
+	<div id="intro"></div>
+	<p style="margin: 0px 20px; margin-top: 20px; margin-bottom: -15px;">Pinned</p>
 	<div id="pin" style="text-align: center;"></div>
 </div>
 
@@ -72,6 +72,14 @@ fetch("header.txt").then(function(response) {
 	</div>
 </div>
 
+<script>
+fetch("HimDek/README.md").then(function(response) {
+	response.text().then(function(text) {
+		document.getElementById("intro").innerHTML = marked.parse(text);
+	});
+});
+</script>
+	
 <script>
 pinElement = document.getElementById("pin");
 
