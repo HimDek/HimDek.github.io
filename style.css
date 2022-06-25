@@ -7,7 +7,7 @@ body {
   min-width: 350px;
   color: #434d58;
   background-color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Ubuntu, Sans-Serif;
 }
 
 .invisible {
@@ -28,6 +28,7 @@ svg {
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
+  color: #2f80ed;
 }
 
 button svg {
