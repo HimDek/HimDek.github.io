@@ -48,6 +48,7 @@ button svg {
 img {
   margin: 20px;
   background-color: #dfdfdf;
+  max-width: -webkit-fill-available;
 }
 
 a {
