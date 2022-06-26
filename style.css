@@ -290,6 +290,10 @@ a .box
   margin: 5px;
 }
 
+.stats span {
+  margin: 0px;
+}
+
 .stats a {
   color: #434d58;
 }
