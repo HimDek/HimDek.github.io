@@ -81,7 +81,7 @@ fetch("HimDek/README.md").then(function(response) {
 });
 fetch("donate.txt").then(function(response) {
 	response.text().then(function(text) {
-		document.getElementById("donate").innerHTML = marked.parse(text);
+		document.getElementById("donatetab").innerHTML = marked.parse(text);
 	});
 });
 </script>
