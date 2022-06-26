@@ -79,7 +79,7 @@ button {
   color: #2f80ed;
 }
 
-button:hover, button:active {
+button:hover {
   box-shadow: 0px 0px 10px #2f80ed;
 }
 
@@ -116,6 +116,7 @@ header div div, footer div div {
   padding: 9px;
   font-size: 18px;
   color: buttontext;
+  box-shadow: none;
 }
 
 .tab button:not(.activetab):not(.active):hover {
@@ -250,7 +251,7 @@ header div div, footer div div {
   margin: 20px;
 }
 
-.box a button:hover, .box a button:active {
+.box a button:hover {
   text-shadow: 0px 0px 10px #2f80ed;
   box-shadow: none;
 }
