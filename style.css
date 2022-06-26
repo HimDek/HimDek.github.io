@@ -302,6 +302,10 @@ a .box
   display: block;
 }
 
+.buttons img {
+  margin: 0px;
+}
+
 table {
   border: 2px solid #434d58;
   border-collapse: collapse;
