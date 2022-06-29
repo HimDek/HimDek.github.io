@@ -349,11 +349,7 @@ a .box
 
 .stats *:not(svg) {
   vertical-align: bottom;
-  margin: 5px;
-}
-
-.stats span {
-  margin: 0px;
+  margin-right: 10px;
 }
 
 .stats a {
