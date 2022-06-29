@@ -81,7 +81,7 @@ button svg {
   0% {
     padding: 8px 0px;
     opacity: 0%;
-    text-indent: -60px;
+    text-indent: -200px;
   }
   100% {
     padding: 8px;
@@ -99,7 +99,7 @@ button svg {
   100% {
     padding: 8px 0px;
     opacity: 0%;
-    text-indent: -60px;
+    text-indent: -200px;
   }
 }
 
