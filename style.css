@@ -45,6 +45,65 @@ button svg {
   fill: #434d58;
 }
 
+.anb {
+	background-color: white;
+  margin: 4px;
+	height: 32px;
+  width: auto;
+	display: inline-flex;
+	border-radius: 16px; 
+  animation: decwidth 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.anb svg {
+  fill: #434d58;
+}
+
+.anbtxt {
+	overflow: hidden;
+  padding: 8px 0px;
+  opacity: 0%;
+	animation: hide 0.3s ease-in;
+	animation-fill-mode: forwards;
+}
+
+.anb:hover {
+	animation: incwidth 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.anb:hover .anbtxt {
+	animation: show 0.3s ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    padding: 8px 0px;
+    opacity: 0%;
+    text-indent: -60px;
+  }
+  100% {
+  	padding: 8px;
+    opacity: 100%;
+    text-indent: 0px;
+  }
+}
+
+@keyframes hide {
+  0% {
+  	padding: 8px;
+    opacity: 100%;
+    text-indent: 0px;
+  }
+  100% {
+    padding: 8px 0px;
+    opacity: 0%;
+    text-indent: -60px;
+  }
+}
+
 img {
   margin: 20px;
   background-color: #dfdfdf;
@@ -60,6 +119,10 @@ a {
 
 a:hover {
   text-shadow: 0px 0px 10px #2f80ed;
+}
+
+a:hover svg {
+  filter: drop-shadow(0px 0px 10px rgb(47 128 237));
 }
 
 a p {
