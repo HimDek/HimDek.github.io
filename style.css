@@ -46,12 +46,11 @@ button svg {
 }
 
 .anb {
-	background-color: white;
   margin: 4px;
-	height: 32px;
+  height: 32px;
   width: auto;
-	display: inline-flex;
-	border-radius: 16px; 
+  display: inline-flex;
+  border-radius: 16px; 
   animation: decwidth 0.3s ease-in;
   animation-fill-mode: forwards;
 }
@@ -61,21 +60,21 @@ button svg {
 }
 
 .anbtxt {
-	overflow: hidden;
+  overflow: hidden;
   padding: 8px 0px;
   opacity: 0%;
-	animation: hide 0.3s ease-in;
-	animation-fill-mode: forwards;
+  animation: hide 0.3s ease-in;
+  animation-fill-mode: forwards;
 }
 
 .anb:hover {
-	animation: incwidth 0.3s ease-in;
+  animation: incwidth 0.3s ease-in;
   animation-fill-mode: forwards;
 }
 
 .anb:hover .anbtxt {
-	animation: show 0.3s ease-in;
-	animation-fill-mode: forwards;
+  animation: show 0.3s ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes show {
@@ -85,7 +84,7 @@ button svg {
     text-indent: -60px;
   }
   100% {
-  	padding: 8px;
+    padding: 8px;
     opacity: 100%;
     text-indent: 0px;
   }
@@ -93,7 +92,7 @@ button svg {
 
 @keyframes hide {
   0% {
-  	padding: 8px;
+    padding: 8px;
     opacity: 100%;
     text-indent: 0px;
   }
