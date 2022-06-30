@@ -46,11 +46,9 @@ button svg {
 }
 
 .anb {
-  margin: 4px;
-  height: 32px;
+  margin: 0px;
   width: auto;
   display: inline-flex;
-  border-radius: 16px; 
   animation: decwidth 0.3s ease-in;
   animation-fill-mode: forwards;
 }
@@ -67,12 +65,12 @@ button svg {
   animation-fill-mode: forwards;
 }
 
-.anb:hover {
+a:hover .anb {
   animation: incwidth 0.3s ease-in;
   animation-fill-mode: forwards;
 }
 
-.anb:hover .anbtxt {
+a:hover .anb .anbtxt {
   animation: show 0.3s ease-in;
   animation-fill-mode: forwards;
 }
