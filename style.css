@@ -45,6 +45,10 @@ button svg {
   fill: #434d58;
 }
 
+.buttons *:not(a) {
+  margin: 2px;
+}
+
 .anb {
   margin: 0px;
   width: auto;
