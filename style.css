@@ -303,6 +303,11 @@ header div div, footer div div {
   border-radius: 3px;
 }
 
+.main {
+  padding: 10px;
+  margin: 0px 40px;
+}
+
 .box {
   background-color: #dfdfdf;
   transition: 0.3s;
@@ -314,11 +319,6 @@ header div div, footer div div {
 .box a button:hover {
   text-shadow: 0px 0px 10px #2f80ed;
   box-shadow: none;
-}
-
-.main {
-  padding: 10px;
-  margin: 0px 40px;
 }
 
 a .box
