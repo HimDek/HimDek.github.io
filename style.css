@@ -330,23 +330,8 @@ a .box
   margin: 5px;
 }
 
-.controls {
-  display: flex;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-.horizontalspace {
-  flex-grow: 1;
-}
-
-.stats {
-  display: flex;
-  align-items: center;
-}
-
-.stats *:not(svg) {
-  vertical-align: bottom;
+.stats span {
+  display: inline-block;
   margin-right: 10px;
 }
 
@@ -356,14 +341,6 @@ a .box
 
 .stats a:hover {
   color: #2f80ed;
-}
-
-.buttons {
-  display: block;
-}
-
-.buttons img {
-  margin: 0px;
 }
 
 table {
