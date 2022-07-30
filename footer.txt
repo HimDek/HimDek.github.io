@@ -2,6 +2,6 @@
 <h2>Did you like my Website?</h2>
 <p>Wanna make one for yourself?</p>
 		<a href="https://github.com/HimDek/HimDek.github.io">
-			<img src="https://img.shields.io/badge/GitHub-View%20Sourcecode-informational?style=for-the-badge&logo=github&color=grey" />
+			<img src="https://img.shields.io/badge/GitHub-View%20Sourcecode-informational?style=for-the-badge&logo=github&color=grey" alt="Source Code" />
 		</a>
 </div>
