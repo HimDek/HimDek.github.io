@@ -22,16 +22,16 @@ function opentab(evt, tabName) {
   var tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].className = tabcontent[i].className.replace(" show", "");
+    tabcontent[i].classList.remove("show");
   }
 
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].classList.remove("active");
   }
   document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
-  document.getElementById(tabName).className += " show";
-  evt.currentTarget.className += " active";
+  document.getElementById(tabName).classList.add("show");
+  evt.currentTarget.classList.add("active");
   window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
 }
 
@@ -50,7 +50,6 @@ function hasloaded(e) {
   hiddenLeft.forEach(el => observer.observe(el));
   const hiddenRight = document.querySelectorAll('.hiddenRight');
   hiddenRight.forEach(el => observer.observe(el));
-  document.querySelectorAll('.tabcontent').forEach(element => element.classList.add('hiddenDown'));
   document.getElementById('home').click();
   document.getElementById(tab).click();
 }
