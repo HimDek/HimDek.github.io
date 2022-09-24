@@ -4,7 +4,7 @@ fetch("header.txt").then(function(response) {
   });
 });
 
-fetch("README.md").then(function(response) {
+fetch("himdek/README.md").then(function(response) {
   response.text().then(function(text) {
     document.getElementById("intro").innerHTML = marked.parse(text);
   });
