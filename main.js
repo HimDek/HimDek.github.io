@@ -23,6 +23,7 @@ function opentab(evt, tabName) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].classList.remove("show");
+    tabcontent[i].style.display = "none";
   }
 
   tablinks = document.getElementsByClassName("tablinks");
@@ -31,6 +32,7 @@ function opentab(evt, tabName) {
   }
   document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
   document.getElementById(tabName).classList.add("show");
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.classList.add("active");
   window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
 }
