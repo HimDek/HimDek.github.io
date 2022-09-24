@@ -29,7 +29,11 @@ function opentab(evt, tabName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].classList.remove("active");
   }
-  document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
+  document.getElementById("activetab").classList.remove("show");
+  document.getElementById("activetab").addEventListener("transitionend", () => {
+  	document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
+  	document.getElementById("activetab").classList.add("show");
+  });
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.classList.add("active");
   window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
@@ -42,6 +46,7 @@ document.addEventListener("loaded", hasloaded, false);
 
 function hasloaded(e) {
   document.querySelectorAll('.anb, h1, h2, h3, form, img, p, b, li').forEach(element => element.classList.add('hiddenDown'));
+  document.querySelectorAll('.tabmenu, .activetab, .tablinks').forEach(element => element.classList.add('hiddenLeft'));
   const hiddenUp = document.querySelectorAll('.hiddenUp');
   hiddenUp.forEach(el => observer.observe(el));
   const hiddenDown = document.querySelectorAll('.hiddenDown');
