@@ -15,17 +15,47 @@ body {
   display: none;
 }
 
+.hiddenUp {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+.hiddenDown {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.hiddenLeft {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.hiddenRight {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+h1 h2 h3 {
+  color: #2f80ed;
+}
+
 h1 {
   text-align: center;
-  color: #2f80ed;
-}
-
-h2 {
-  color: #2f80ed;
-}
-
-h3 {
-  color: #2f80ed;
 }
 
 pre {
@@ -85,6 +115,7 @@ a:hover .anb .anbtxt {
     opacity: 0%;
     text-indent: -200px;
   }
+
   100% {
     padding: 8px;
     opacity: 100%;
@@ -98,6 +129,7 @@ a:hover .anb .anbtxt {
     opacity: 100%;
     text-indent: 0px;
   }
+
   100% {
     padding: 8px 0px;
     opacity: 0%;
@@ -147,7 +179,8 @@ button:hover {
   box-shadow: 0px 0px 10px #2f80ed;
 }
 
-header, footer {
+header,
+footer {
   background-color: #dfdfdf;
   text-align: center;
 }
@@ -156,11 +189,13 @@ header {
   padding-bottom: 30px;
 }
 
-header div, footer div {
+header div,
+footer div {
   display: inline-flex;
 }
 
-header div div, footer div div {
+header div div,
+footer div div {
   text-align: center;
   display: inline-block;
   margin: 0px 10px;
@@ -172,7 +207,7 @@ header div div, footer div div {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index:1;
+  z-index: 1;
 }
 
 .tab button {
@@ -187,7 +222,8 @@ header div div, footer div div {
   text-decoration: underline;
 }
 
-.tab button.active:hover, .tab button.activetab:hover {
+.tab button.active:hover,
+.tab button.activetab:hover {
   cursor: default;
 }
 
@@ -228,36 +264,36 @@ header div div, footer div div {
   .tab button.tablinks {
     display: none;
   }
-  
+
   .tab button.activetab {
     float: none;
     display: block;
   }
-  
+
   .tab button.activetab:empty {
     background-color: inherit;
     padding: 0px;
     margin: 27px;
   }
-  
+
   .tab .tabmenu {
     float: left;
     display: block;
   }
-  
+
   .tab.responsive button.activetab {
     margin-bottom: 10px;
   }
-  
+
   .tab.responsive button.activetab:empty {
     margin-bottom: 30px;
   }
-  
+
   .tab.responsive button.tablinks {
     float: none;
     display: block;
   }
-  
+
   .tab.responsive button.tablinks.active {
     display: none;
   }
@@ -267,13 +303,15 @@ header div div, footer div div {
     transform: rotate(-45deg) translate(-6px, 6px);
   }
 
-  .tab.responsive .tabmenu .hamicon .bar2 {opacity: 0;}
+  .tab.responsive .tabmenu .hamicon .bar2 {
+    opacity: 0;
+  }
 
   .tab.responsive .tabmenu .hamicon .bar3 {
     -webkit-transform: rotate(45deg) translate(-6px, -7px);
     transform: rotate(45deg) translate(-6px, -7px);
   }
-  
+
   .main {
     margin: 0px 10px;
   }
@@ -298,7 +336,9 @@ header div div, footer div div {
   margin: 10px 6px;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 30px;
   height: 5px;
   background-color: #434d58;
@@ -325,8 +365,7 @@ header div div, footer div div {
   box-shadow: none;
 }
 
-a .box
-{
+a .box {
   padding-bottom: 25px;
 }
 
