@@ -52,6 +52,12 @@ const tab = urlParams.get('tab');
 document.addEventListener("loaded", hasloaded, false);
 
 function hasloaded(e) {
+  const anb = document.getElementsByClassName('anb')
+  len = anb !== null ? anb.length : 0,
+    i = 0;
+  for (i; i < len; i++) {
+    anb[i].className += " hiddenDown";
+  }
   const anb = document.querySelectorAll('.anb');
   anb.forEach(el => el.target.classList.add('hiddenDown'));
   const hiddenUp = document.querySelectorAll('.hiddenUp');
