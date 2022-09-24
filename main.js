@@ -4,7 +4,7 @@ fetch("header.txt").then(function(response) {
   });
 });
 
-fetch("HimDek/README.md").then(function(response) {
+fetch("README.md").then(function(response) {
   response.text().then(function(text) {
     document.getElementById("intro").innerHTML = marked.parse(text);
   });
@@ -22,7 +22,6 @@ function opentab(evt, tabName) {
   var tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.remove("show");
     tabcontent[i].style.display = "none";
   }
 
@@ -31,7 +30,6 @@ function opentab(evt, tabName) {
     tablinks[i].classList.remove("active");
   }
   document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
-  document.getElementById(tabName).classList.add("show");
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.classList.add("active");
   window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
@@ -69,6 +67,9 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
+    }
+    else {
+    	entry.target.classList.remove('show');
     }
   });
 });
