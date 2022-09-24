@@ -22,7 +22,7 @@ function opentab(evt, tabName) {
   var tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].className = tabcontent[i].className.replace (" show", "");
+    tabcontent[i].className = tabcontent[i].className.replace(" show", "");
   }
 
   tablinks = document.getElementsByClassName("tablinks");
@@ -66,7 +66,6 @@ function Menu(icon) {
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
     }
