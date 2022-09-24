@@ -58,8 +58,6 @@ function hasloaded(e) {
   for (i; i < len; i++) {
     anb[i].className += " hiddenDown";
   }
-  const anb = document.querySelectorAll('.anb');
-  anb.forEach(el => el.target.classList.add('hiddenDown'));
   const hiddenUp = document.querySelectorAll('.hiddenUp');
   hiddenUp.forEach(el => observer.observe(el));
   const hiddenDown = document.querySelectorAll('.hiddenDown');
