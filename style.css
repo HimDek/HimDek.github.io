@@ -321,7 +321,6 @@ footer div div {
 
 .tabcontent {
   animation: fadeEffect 1s;
-  display: none;
   border: none;
 }
 
