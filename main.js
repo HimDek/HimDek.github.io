@@ -16,17 +16,6 @@ fetch("footer.txt").then(function(response) {
   });
 });
 
-const loaded = new Event("loaded");
-listrepos("HimDek", document.getElementById("repostab")).then(reposcount => {
-  document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + reposcount.toString() + "</span>";
-  document.dispatchEvent(loaded);
-});
-
-listgists("HimDek", document.getElementById("giststab")).then(gistscount => {
-  document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + gistscount.toString() + "</span>";
-  document.dispatchEvent(loaded);
-});
-
 function opentab(evt, tabName) {
   var i, tablinks;
 
