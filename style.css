@@ -22,22 +22,6 @@ body {
   transition: all 0.5s;
 }
 
-.hiddenContainer {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(100%);
-  transition: all 0.5s;
-  visibility: hidden;
-}
-
-.shownContainer {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transform: translateY(0);
-  visibility: visible;
-}
-
 .hiddenDown {
   opacity: 0;
   filter: blur(5px);
