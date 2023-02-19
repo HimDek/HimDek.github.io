@@ -1,3 +1,7 @@
+@import "styles/variables.css";
+@import "styles/animations.css";
+@import "styles/navbar.css";
+
 * {
   box-sizing: border-box;
 }
@@ -5,14 +9,160 @@
 body {
   margin: 0px;
   min-width: 350px;
-  color: #434d58;
-  background-color: #ffffff;
-  font-family: 'Segoe UI', Ubuntu, Sans-Serif;
-  font-size: 16;
+  color: var(--on-navgroup);
+  background-color: var(--navgroup-bg);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
 }
 
-.invisible {
-  display: none;
+h1 h2 h3 {
+  color: var(--info-on-title);
+}
+
+h1 {
+  text-align: center;
+}
+
+pre {
+  width: auto;
+  overflow: auto;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  fill: var(--info-on-title);
+  transition: 0.3s;
+}
+
+button svg {
+  fill: var(--on-navgroup);
+}
+
+.buttons *:not(a) {
+  margin: 2px;
+}
+
+img {
+  margin: 20px;
+  max-width: -webkit-fill-available;
+  transition: 0.3s;
+}
+
+a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+a:hover {
+  text-shadow: 0px 0px 10px #2f80ed;
+}
+
+a:hover svg {
+  filter: drop-shadow(0px 0px 10px rgb(47 128 237));
+}
+
+a p {
+  text-decoration: none;
+  text-shadow: none;
+  color: var(--on-navgroup);
+}
+
+a img:hover {
+  box-shadow: 0px 0px 10px #2f80ed;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: var(--on-navgroup);
+  background-color: var(--navgroup-bg);
+}
+
+header,
+footer {
+  background-color: var(--navgroup-bg);
+  text-align: center;
+}
+
+header {
+  padding-bottom: 30px;
+}
+
+header div,
+footer div {
+  display: inline-flex;
+}
+
+header div div,
+footer div div {
+  text-align: center;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.main {
+  padding: 10px;
+  margin: 0px 40px;
+}
+
+.box {
+  background-color: var(--navgroup-bg);
+  transition: 0.3s;
+  padding: 2.5rem;
+  padding-bottom: 2rem;
+  margin: 1rem;
+  border-radius: 2rem;
+}
+
+.box h2 {
+  margin-top: 0rem;
+}
+
+.box a button:hover {
+  text-shadow: 0px 0px 10px #2f80ed;
+  box-shadow: none;
+}
+
+a .box {
+  padding-bottom: 25px;
+}
+
+.box div {
+  margin: 5px;
+}
+
+.stats span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stats a {
+  color: var(--on-navgroup);
+}
+
+.stats a:hover {
+  color: #2f80ed;
+}
+
+table {
+  border: 2px solid var(--on-navgroup);
+  border-collapse: collapse;
+  margin: 30px;
+}
+
+th {
+  border: 2px solid var(--on-navgroup);
+  text-align: center;
+  padding: 5px;
+}
+
+td {
+  border: 1px solid var(--on-navgroup);
+  text-align: left;
+  padding: 5px;
 }
 
 .hiddenUp {
@@ -50,34 +200,6 @@ body {
   transform: translateY(0);
 }
 
-h1 h2 h3 {
-  color: #2f80ed;
-}
-
-h1 {
-  text-align: center;
-}
-
-pre {
-  width: auto;
-  overflow: auto;
-}
-
-svg {
-  display: inline-block;
-  vertical-align: middle;
-  padding-bottom: 3px;
-  fill: #2f80ed;
-}
-
-button svg {
-  margin-right: 5px;
-  fill: #434d58;
-}
-
-.buttons *:not(a) {
-  margin: 2px;
-}
 
 .anb {
   margin: 0px;
@@ -88,7 +210,7 @@ button svg {
 }
 
 .anb svg {
-  fill: #434d58;
+  fill: var(--on-navgroup);
 }
 
 .anbtxt {
@@ -107,310 +229,4 @@ a:hover .anb {
 a:hover .anb .anbtxt {
   animation: show 0.3s ease-in;
   animation-fill-mode: forwards;
-}
-
-@keyframes show {
-  0% {
-    padding: 8px 0px;
-    opacity: 0%;
-    text-indent: -200px;
-  }
-
-  100% {
-    padding: 8px;
-    opacity: 100%;
-    text-indent: 0px;
-  }
-}
-
-@keyframes hide {
-  0% {
-    padding: 8px;
-    opacity: 100%;
-    text-indent: 0px;
-  }
-
-  100% {
-    padding: 8px 0px;
-    opacity: 0%;
-    text-indent: -200px;
-  }
-}
-
-img {
-  margin: 20px;
-  background-color: #dfdfdf;
-  max-width: -webkit-fill-available;
-  transition: 0.3s;
-}
-
-a {
-  transition: 0.3s;
-  text-decoration: none;
-  color: #2f80ed;
-}
-
-a:hover {
-  text-shadow: 0px 0px 10px #2f80ed;
-}
-
-a:hover svg {
-  filter: drop-shadow(0px 0px 10px rgb(47 128 237));
-}
-
-a p {
-  text-decoration: none;
-  text-shadow: none;
-  color: #434d58;
-}
-
-a img:hover {
-  box-shadow: 0px 0px 10px #2f80ed;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  background-color: #dfdfdf;
-  color: #2f80ed;
-}
-
-button:hover {
-  box-shadow: 0px 0px 10px #2f80ed;
-}
-
-header,
-footer {
-  background-color: #dfdfdf;
-  text-align: center;
-}
-
-header {
-  padding-bottom: 30px;
-}
-
-header div,
-footer div {
-  display: inline-flex;
-}
-
-header div div,
-footer div div {
-  text-align: center;
-  display: inline-block;
-  margin: 0px 10px;
-}
-
-.tab {
-  overflow: hidden;
-  background-color: #dfdfdf;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-}
-
-.tab button {
-  float: left;
-  padding: 9px;
-  font-size: 18px;
-  color: buttontext;
-  box-shadow: none;
-}
-
-.tab button:not(.activetab):not(.active):hover {
-  text-decoration: underline;
-}
-
-.tab button.active:hover,
-.tab button.activetab:hover {
-  cursor: default;
-}
-
-.tab button.active {
-  text-decoration: underline;
-}
-
-.tab button.activetab {
-  display: none;
-  font-size: 21px;
-  padding: 14px;
-  margin: 1px 5px;
-}
-
-.tab .tabmenu {
-  border-radius: 50%;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  margin: 2px 5px;
-  display: none;
-  transition: 0.5s;
-}
-
-.tab button span {
-  vertical-align: middle;
-  font-size: 12px;
-  display: inline-block;
-  background-color: #434d58;
-  border-radius: 10px;
-  padding: 3px;
-  padding-left: 7px;
-  padding-right: 7px;
-  color: white;
-}
-
-@media screen and (max-width: 700px) {
-  .tab button.tablinks {
-    display: none;
-  }
-
-  .tab button.activetab {
-    float: none;
-    display: block;
-  }
-
-  .tab button.activetab:empty {
-    background-color: inherit;
-    padding: 0px;
-    margin: 27px;
-  }
-
-  .tab .tabmenu {
-    float: left;
-    display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 10;
-  }
-
-  .tab.responsive button.activetab {
-    margin-bottom: 10px;
-  }
-
-  .tab.responsive button.activetab:empty {
-    margin-bottom: 30px;
-  }
-
-  .tab.responsive button.tablinks {
-    float: none;
-    display: block;
-  }
-
-  .tab.responsive button.tablinks.active {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 0.5s;
-    height: 0;
-    padding: 0;
-  }
-
-  .tab.responsive .tabmenu .hamicon .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
-  }
-
-  .tab.responsive .tabmenu .hamicon .bar2 {
-    opacity: 0;
-  }
-
-  .tab.responsive .tabmenu .hamicon .bar3 {
-    -webkit-transform: rotate(45deg) translate(-6px, -7px);
-    transform: rotate(45deg) translate(-6px, -7px);
-  }
-
-  .main {
-    margin: 0px 10px;
-  }
-
-
-}
-
-.tabcontent {
-  animation: fadeEffect 1s;
-  border: none;
-}
-
-.tabcontent ol {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-}
-
-.hamicon {
-  display: inline-block;
-  margin: 10px 6px;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 30px;
-  height: 5px;
-  background-color: #434d58;
-  margin: 4px;
-  transition: 0.4s;
-  border-radius: 3px;
-}
-
-.main {
-  padding: 10px;
-  margin: 0px 40px;
-}
-
-.box {
-  background-color: #dfdfdf;
-  transition: 0.3s;
-  padding: 25px;
-  padding-bottom: 20px;
-  margin: 20px;
-}
-
-.box a button:hover {
-  text-shadow: 0px 0px 10px #2f80ed;
-  box-shadow: none;
-}
-
-a .box {
-  padding-bottom: 25px;
-}
-
-.box div {
-  margin: 5px;
-}
-
-.stats {
-  transition-delay: 0.2s;
-}
-
-.stats span {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.stats a {
-  color: #434d58;
-}
-
-.stats a:hover {
-  color: #2f80ed;
-}
-
-table {
-  border: 2px solid #434d58;
-  border-collapse: collapse;
-  margin: 30px;
-}
-
-th {
-  border: 2px solid #434d58;
-  text-align: center;
-  padding: 5px;
-}
-
-td {
-  border: 1px solid #434d58;
-  text-align: left;
-  padding: 5px;
 }

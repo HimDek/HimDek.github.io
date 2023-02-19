@@ -38,9 +38,8 @@ function opentab(evt, tabName) {
   evt.currentTarget.classList.add("active");
   window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
   
-  document.querySelectorAll('.anb, h1, h2, h3, form, img, p, b, li').forEach(element => element.classList.add('hiddenDown'));
+  document.querySelectorAll('.anb').forEach(element => element.classList.add('hiddenDown'));
   document.querySelectorAll('.tabmenu, .activetab, .tablinks').forEach(element => element.classList.add('hiddenLeft'));
-  document.querySelectorAll('.stats').forEach(element => element.classList.add('hiddenRight'));
   const hiddenUp = document.querySelectorAll('.hiddenUp');
   hiddenUp.forEach(el => observer.observe(el));
   const hiddenDown = document.querySelectorAll('.hiddenDown');
