@@ -83,6 +83,7 @@ button {
 
 header,
 footer {
+  font-family: 'Lexend Zetta', sans-serif;
   background-color: var(--navgroup-bg);
   text-align: center;
 }
@@ -219,6 +220,7 @@ td {
   opacity: 0%;
   animation: hide 0.3s ease-in;
   animation-fill-mode: forwards;
+  color: var(--on-navgroup);
 }
 
 a:hover .anb {
