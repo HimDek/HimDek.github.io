@@ -217,7 +217,7 @@
     z-index: 1;
     width: var(--border-radius-m);
     height: var(--border-radius-m);
-    bottom: 0rem;
+    bottom: 1rem;
     background-color: var(--navgroup-bg);
 }
 
