@@ -15,6 +15,10 @@ body {
   font-size: 1rem;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 h1 h2 h3 {
   color: var(--info-on-title);
 }
@@ -86,6 +90,7 @@ footer {
   font-family: 'Lexend Zetta', sans-serif;
   background-color: var(--navgroup-bg);
   text-align: center;
+  z-index: 2;
 }
 
 header {

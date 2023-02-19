@@ -2,7 +2,7 @@
     background-color: var(--navgroup-bg);
     position: -webkit-sticky;
     position: sticky;
-    z-index: 1;
+    z-index: 3;
     padding: 0rem 1rem;
     margin: 0rem;
     top: 0rem;
@@ -151,17 +151,11 @@
     border-radius: 2rem;
     margin: 1rem;
     background-color: var(--page-bg);
-    height: calc(100vh - 6rem);
-    overflow-y: scroll;
 }
 
-.tabcontent::-webkit-scrollbar {
-    display: none;
-}
-  
 .tabcontent ol {
     margin: 0rem;
-    padding: 0rem;
+    padding: 0.01rem 0rem;
     list-style-type: none;
 }
   
@@ -188,4 +182,54 @@
 
 .change-theme:hover .material-symbols-rounded {
     font-variation-settings: 'FILL' 1;
+}
+
+.inverted-topleft-corner,
+.inverted-topright-corner {
+    position: -webkit-fixed;
+    position: fixed;
+    z-index: 1;
+    width: var(--border-radius-m);
+    height: var(--border-radius-m);
+    top: 3.5rem;
+    background-color: var(--navgroup-bg);
+}
+
+.inverted-topleft-corner {
+    left: 1rem;
+    -webkit-mask: var(--topleft-mask);
+    mask: var(--topleft-mask);
+    margin-bottom: -2rem;
+}
+
+.inverted-topright-corner {
+    left: auto;
+    right: 1rem;
+    -webkit-mask: var(--topright-mask);
+    mask: var(--topright-mask);
+    margin-bottom: -2rem;
+}
+
+.inverted-bottomleft-corner,
+.inverted-bottomright-corner {
+    position: -webkit-fixed;
+    position: fixed;
+    z-index: 1;
+    width: var(--border-radius-m);
+    height: var(--border-radius-m);
+    bottom: 0rem;
+    background-color: var(--navgroup-bg);
+}
+
+.inverted-bottomleft-corner {
+  left: 1rem;
+  -webkit-mask: var(--bottomleft-mask);
+  mask: var(--bottomleft-mask);
+}
+
+.inverted-bottomright-corner {
+  left: auto;
+  right: 1rem;
+  -webkit-mask: var(--bottomright-mask);
+  mask: var(--bottomright-mask);
 }

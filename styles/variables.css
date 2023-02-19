@@ -134,8 +134,10 @@
 /* INVERTED ROUNDED CORNERS MASKS */
 
 :root {
-    --topleft-mask: radial-gradient(var(--border-radius-xl) at 100% 100%,#0000 98%,#000);
-    --topright-mask: radial-gradient(var(--border-radius-xl) at 0 100%,#0000 98%,#000);
+    --topleft-mask: radial-gradient(var(--border-radius-m) at 100% 100%,#0000 100%,#000);
+    --topright-mask: radial-gradient(var(--border-radius-m) at 0 100%,#0000 100%,#000);
+    --bottomleft-mask: radial-gradient(var(--border-radius-m) at 100% 0,#0000 100%,#000);
+    --bottomright-mask: radial-gradient(var(--border-radius-m) at 0 0,#0000 100%,#000);
     --logo-mask: url("../res/img/logoMask.svg");
 }
 
@@ -144,10 +146,11 @@
     /* BORDER RADIUS SIZES */
 
 :root {
-    --border-radius-s: 1.2rem;
-    --border-radius-m: 1.6rem;
+    --border-radius-xa: 1.2rem;
+    --border-radius-s: 1.6rem;
+    --border-radius-m: 2rem;
     --border-radius-l: 2.4rem;
-    --border-radius-xl: 3.2rem;
+    --border-radius-xl: 3rem;
 }
 
     /* FONT SIZES */
