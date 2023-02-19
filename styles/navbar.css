@@ -193,6 +193,7 @@
     height: var(--border-radius-m);
     top: 3.5rem;
     background-color: var(--navgroup-bg);
+    margin: 0rem;
 }
 
 .inverted-topleft-corner {
@@ -219,6 +220,7 @@
     height: var(--border-radius-m);
     bottom: 1rem;
     background-color: var(--navgroup-bg);
+    margin: 0rem;
 }
 
 .inverted-bottomleft-corner {
@@ -232,4 +234,13 @@
   right: 1rem;
   -webkit-mask: var(--bottomright-mask);
   mask: var(--bottomright-mask);
+}
+
+.bottomedge {
+  height: 1rem;
+  width: 100vw;
+  position: fixed;
+  bottom: 0rem;
+  left: 0rem;
+  background-color: var(--navgroup-bg);
 }

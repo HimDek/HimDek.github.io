@@ -3,7 +3,7 @@
 	<div class="inverted-bottomleft-corner"></div>
 	<div class="inverted-bottomright-corner"></div>
 </span>
-<div style="height:1rem; position: fixed; bottom:0rem; width:100vw"></div>
+<div class="bottomedge"></div>
 <h2>Did you like my Website?</h2>
 <p>Wanna make one for yourself?</p>
 		<a href="https://github.com/HimDek/HimDek.github.io">
