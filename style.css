@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
 }
 
 h1 h2 h3 {
-  color: var(--info-on-title);
+  color: var(--on-navgroup);
   font-family: 'Lexend Zetta', sans-serif;
 }
 
@@ -41,7 +41,7 @@ svg {
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
-  fill: var(--info-on-title);
+  fill: var(--on-navgroup);
   transition: 0.3s;
 }
 
@@ -71,6 +71,7 @@ a:hover {
 
 a:hover svg {
   filter: drop-shadow(0px 0px 10px rgb(47 128 237));
+  fill: #2f80ed;
 }
 
 a p {
@@ -128,7 +129,7 @@ footer div div {
   border-radius: 2rem;
 }
 
-.box h2 {
+.box h2, .box h4 {
   margin-top: 0rem;
 }
 
