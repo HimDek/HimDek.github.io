@@ -19,12 +19,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-d-none {
+.d-none {
   display: none !important;
 }
 
 h1 h2 h3 {
   color: var(--info-on-title);
+  font-family: 'Lexend Zetta', sans-serif;
 }
 
 h1 {
@@ -142,6 +143,10 @@ a .box {
 
 .box div {
   margin: 5px;
+}
+
+.stats {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .stats span {
