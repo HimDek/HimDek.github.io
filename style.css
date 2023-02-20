@@ -19,6 +19,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+d-none {
+  display: none;
+}
+
 h1 h2 h3 {
   color: var(--info-on-title);
 }
