@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
-h1 h2 h3 h4 {
+h1, h2, h3, h4 {
   color: var(--on-navgroup);
   font-family: 'Lexend Zetta', sans-serif;
 }
