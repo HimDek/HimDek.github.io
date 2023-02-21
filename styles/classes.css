@@ -5,10 +5,19 @@
 .box, .card {
     color: var(--on-navgroup);
     background-color: var(--navgroup-bg);
-    padding: 2.5rem;
+    padding: 1.5rem;
     margin: 1rem;
     border-radius: 2rem;
     transition: 0.3s;
+}
+
+.card-title, .card-content, .card-footer {
+    margin: 1rem;
+    padding: 0rem;
+}
+
+.card-title *, .card-content *, .card-footer * {
+    margin: 0rem;
 }
 
 .stats {
