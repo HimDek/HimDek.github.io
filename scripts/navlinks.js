@@ -1,4 +1,4 @@
-fetch("../tab.txt").then(function(response) {
+fetch("/tab.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("navbar").innerHTML = text + document.getElementById("navbar").innerHTML;
     	});
