@@ -60,7 +60,7 @@ a svg {
   transition: 0s;
 }
 
-a:hover, a:hover * {
+a:hover, a:hover *:not(p) {
   text-shadow: 0px 0px 10px #2f80ed;
   color: #2f80ed;
 }
@@ -88,7 +88,8 @@ footer {
   background-color: var(--navgroup-bg);
   text-align: center;
   z-index: 2;
-  transition: 0.3s
+  color: var(--on-navgroup);
+  transition: 0.3s;
 }
 
 header {
