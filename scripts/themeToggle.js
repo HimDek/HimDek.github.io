@@ -7,6 +7,7 @@ themeIcon = document.createElement("div");
 theme.classList.add("navright");
 themebutton.classList.add("change-theme");
 themeIcon.classList.add("material-symbols-rounded");
+themeIcon.classList.add("d-none");
 
 themebutton.setAttribute("onclick", "themeToggle()");
 themebutton.setAttribute("onkeydown", "if(event.key === 'Enter'){themeToggle()}");
@@ -60,3 +61,7 @@ function themeToggle() {
         darkTheme()
     }
 }
+
+window.addEventListener('load', function () {
+    themeIcon.classList.remove("d-none");    
+})
