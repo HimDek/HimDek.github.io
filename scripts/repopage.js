@@ -6,8 +6,8 @@ function include(file) {
     document.getElementsByTagName('head').item(0).appendChild(script);
 }
 
-include("../scripts/header.js");
-include("../scripts/footer.js");
-include("../scripts/navlinks.js");
-include("../scripts/readme.js");
-include("../scripts/themeToggle.js");
+include("/scripts/header.js");
+include("/scripts/footer.js");
+include("/scripts/navlinks.js");
+include("/scripts/readme.js");
+include("/scripts/themeToggle.js");
