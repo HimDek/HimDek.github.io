@@ -2,31 +2,22 @@
     display: none !important;
 }
 
-.box {
+.box, .card {
     color: var(--on-navgroup);
     background-color: var(--navgroup-bg);
     padding: 2.5rem;
-    padding-bottom: 2rem;
     margin: 1rem;
     border-radius: 2rem;
     transition: 0.3s;
-}
-  
-.card-title h2, .card-title h4 {
-    margin-top: 0rem;
-}
-
-.box div {
-    margin: 5px;
 }
 
 .stats {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.stats span {
+.stats .stat {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 
 .hiddenUp {
