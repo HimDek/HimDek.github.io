@@ -78,31 +78,3 @@
 		opacity: 0;
 	}
 }
-
-@keyframes show {
-    0% {
-        padding: 8px 0px;
-        opacity: 0%;
-        text-indent: -200px;
-    }
-  
-    100% {
-        padding: 8px;
-        opacity: 100%;
-        text-indent: 0px;
-    }
-}
-  
-@keyframes hide {
-    0% {
-        padding: 8px;
-        opacity: 100%;
-        text-indent: 0px;
-    }
-  
-    100% {
-        padding: 8px 0px;
-        opacity: 0%;
-        text-indent: -200px;
-    }
-}

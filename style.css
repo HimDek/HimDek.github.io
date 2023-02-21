@@ -1,10 +1,8 @@
 @import "styles/variables.css";
 @import "styles/animations.css";
 @import "styles/navbar.css";
-
-* {
-  box-sizing: border-box;
-}
+@import "styles/animatedLinks.css";
+@import "styles/classes.css";
 
 body {
   margin: 0px;
@@ -13,18 +11,14 @@ body {
   background-color: var(--navgroup-bg);
   font-family: 'Lexend Deca', sans-serif;
   font-size: 1rem;
+  transition: 0.3s
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.d-none {
-  display: none !important;
-}
-
 h1, h2, h3, h4 {
-  color: var(--on-navgroup);
   font-family: 'Lexend Zetta', sans-serif;
 }
 
@@ -45,14 +39,6 @@ svg {
   transition: 0.3s;
 }
 
-button svg {
-  fill: var(--on-navgroup);
-}
-
-.buttons *:not(a) {
-  margin: 2px;
-}
-
 img {
   margin: 20px;
   max-width: -webkit-fill-available;
@@ -60,12 +46,21 @@ img {
 }
 
 a {
-  transition: 0.3s;
   text-decoration: none;
   color: #2f80ed;
+  transition: 0.3s;
 }
 
-a:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, .stats a:hover {
+a * {
+  color: var(--on-navgroup);
+  transition: 0.3s;
+}
+
+a svg {
+  transition: 0s;
+}
+
+a:hover, a:hover * {
   text-shadow: 0px 0px 10px #2f80ed;
   color: #2f80ed;
 }
@@ -75,13 +70,7 @@ a:hover svg {
   fill: #2f80ed;
 }
 
-a p {
-  text-decoration: none;
-  text-shadow: none;
-  color: var(--on-navgroup);
-}
-
-a img:hover {
+a:hover img {
   box-shadow: 0px 0px 10px #2f80ed;
 }
 
@@ -90,6 +79,7 @@ button {
   cursor: pointer;
   color: var(--on-navgroup);
   background-color: var(--navgroup-bg);
+  transition: 0.3s;
 }
 
 header,
@@ -98,6 +88,7 @@ footer {
   background-color: var(--navgroup-bg);
   text-align: center;
   z-index: 2;
+  transition: 0.3s
 }
 
 header {
@@ -116,50 +107,6 @@ footer div div {
   margin: 0px 10px;
 }
 
-.main {
-  padding: 10px;
-  margin: 0px 40px;
-}
-
-.box {
-  background-color: var(--navgroup-bg);
-  transition: 0.3s;
-  padding: 2.5rem;
-  padding-bottom: 2rem;
-  margin: 1rem;
-  border-radius: 2rem;
-}
-
-.card-title h2, .card-title h4 {
-  margin-top: 0rem;
-}
-
-.box a button:hover {
-  text-shadow: 0px 0px 10px #2f80ed;
-  box-shadow: none;
-}
-
-a .box {
-  padding-bottom: 25px;
-}
-
-.box div {
-  margin: 5px;
-}
-
-.stats {
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.stats span {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.stats a {
-  color: var(--on-navgroup);
-}
-
 table {
   border: 2px solid var(--on-navgroup);
   border-collapse: collapse;
@@ -176,71 +123,4 @@ td {
   border: 1px solid var(--on-navgroup);
   text-align: left;
   padding: 5px;
-}
-
-.hiddenUp {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(-100%);
-  transition: all 0.5s;
-}
-
-.hiddenDown {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(100%);
-  transition: all 0.5s;
-}
-
-.hiddenLeft {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 0.5s;
-}
-
-.hiddenRight {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(100%);
-  transition: all 0.5s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transform: translateY(0);
-}
-
-
-.anb {
-  margin: 0px;
-  width: auto;
-  display: inline-flex;
-  animation: decwidth 0.3s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.anb svg {
-  fill: var(--on-navgroup);
-}
-
-.anbtxt {
-  overflow: hidden;
-  padding: 8px 0px;
-  opacity: 0%;
-  animation: hide 0.3s ease-in;
-  animation-fill-mode: forwards;
-  color: var(--on-navgroup);
-}
-
-a:hover .anb {
-  animation: incwidth 0.3s ease-in;
-  animation-fill-mode: forwards;
-}
-
-a:hover .anb .anbtxt {
-  animation: show 0.3s ease-in;
-  animation-fill-mode: forwards;
 }

@@ -7,6 +7,7 @@
     margin: 0rem;
     top: 0rem;
     display: flex;
+    transition: 0.3s
 }
 
 .navright {
@@ -17,7 +18,7 @@
 .tab {
     overflow: hidden;
     display: inline;
-  }
+}
 
 .nav button {
     font-family: 'Lexend Zetta', sans-serif;
@@ -26,7 +27,6 @@
     font-size: 1rem;
     margin: 0.5rem 0.2rem;
     margin-left: 0rem;
-    color: var(--on-navgroup);
     box-shadow: none;
     border-radius: 2rem;
 }
@@ -72,6 +72,7 @@
     border-radius: 0.75rem;
     padding: 0.2rem 0.5rem;
     color: var(--page-bg);
+    transition: 0.3s;
 }
   
 @media screen and (max-width: 720px) {
@@ -115,7 +116,6 @@
       opacity: 0;
       filter: blur(5px);
       transform: translateX(-100%);
-      transition: 0.3s;
       height: 0;
       padding: 0;
     }
@@ -151,6 +151,7 @@
     border-radius: 2rem;
     margin: 1rem;
     background-color: var(--page-bg);
+    transition: 0.3s;
 }
 
 .tabcontent ol {
@@ -177,7 +178,6 @@
 .change-theme {
     width: 2.5rem;
     height: 2.5rem;
-    transition: 0.3s;
 }
 
 .change-theme:hover .material-symbols-rounded {
