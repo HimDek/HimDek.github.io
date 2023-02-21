@@ -1,4 +1,22 @@
-const themeIcon = document.querySelector("#theme-icon")
+navbar = document.getElementById("navbar");
+
+theme = document.createElement("div");
+themebutton = document.createElement("button");
+themeIcon = document.createElement("div");
+
+theme.classList.add("navright");
+themebutton.classList.add("change-theme");
+themeIcon.classList.add("material-symbols-rounded");
+
+themebutton.setAttribute("onclick", "themeToggle()");
+themebutton.setAttribute("onkeydown", "if(event.key === 'Enter'){themeToggle()}");
+
+themeIcon.setAttribute("id", "theme-icon")
+themeIcon.innerHTML = "dark_mode";
+
+themebutton.appendChild(themeIcon);
+theme.appendChild(themebutton);
+navbar.appendChild(theme);
 
 function lightTheme() {
     themeIcon.textContent = "dark_mode";
