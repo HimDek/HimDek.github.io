@@ -116,9 +116,10 @@ button.activetab:hover {
 
 .inverted-bottomleft-corner,
 .inverted-bottomright-corner {
-    position: -webkit-fixed;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 1rem;
+    margin-top: auto;
 }
 
 .inverted-topleft-corner {
@@ -143,7 +144,7 @@ button.activetab:hover {
 }
 
 .inverted-bottomright-corner {
-    left: auto;
+    margin-left: auto;
     right: 1rem;
     -webkit-mask: var(--bottomright-mask);
     mask: var(--bottomright-mask);
@@ -157,4 +158,28 @@ button.activetab:hover {
     margin-top: auto;
     position: -webkit-sticky;
     position: sticky;
+}
+
+.typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(17);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
