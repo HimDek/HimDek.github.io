@@ -5,9 +5,16 @@ themebutton = document.createElement("button");
 themeIcon = document.createElement("div");
 
 theme.classList.add("navright");
+themebutton.classList.add("my-0");
+themebutton.classList.add("px-2");
+themebutton.classList.add("pt-2");
+themebutton.classList.add("btn");
+themebutton.classList.add("btn-outline-info");
+themebutton.classList.add("rounded-circle");
+themebutton.classList.add("border");
+themebutton.classList.add("border-0");
 themebutton.classList.add("change-theme");
 themeIcon.classList.add("material-symbols-rounded");
-themeIcon.classList.add("d-none");
 
 themebutton.setAttribute("onclick", "themeToggle()");
 themebutton.setAttribute("onkeydown", "if(event.key === 'Enter'){themeToggle()}");
@@ -21,12 +28,12 @@ navbar.appendChild(theme);
 
 function lightTheme() {
     themeIcon.textContent = "dark_mode";
-    document.documentElement.setAttribute('theme', 'light');
+    document.getElementById('body').setAttribute('data-bs-theme', 'light');
 }
 
 function darkTheme() {
     themeIcon.textContent = "light_mode";
-    document.documentElement.setAttribute('theme', 'dark');
+    document.getElementById('body').setAttribute('data-bs-theme', 'dark');
 }
 
 (function() {
@@ -61,7 +68,3 @@ function themeToggle() {
         darkTheme()
     }
 }
-
-window.addEventListener('load', function () {
-    themeIcon.classList.remove("d-none");    
-})

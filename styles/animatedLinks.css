@@ -1,5 +1,4 @@
 .anb {
-    margin: 0px;
     width: auto;
     display: inline-flex;
     animation: decwidth 0.3s ease-in;
@@ -28,7 +27,7 @@ a:hover .anb .anbtxt {
     0% {
         padding: 8px 0px;
         opacity: 0%;
-        text-indent: -200px;
+        text-indent: -400px;
     }
   
     100% {
@@ -48,6 +47,6 @@ a:hover .anb .anbtxt {
     100% {
         padding: 8px 0px;
         opacity: 0%;
-        text-indent: -200px;
+        text-indent: -400px;
     }
 }

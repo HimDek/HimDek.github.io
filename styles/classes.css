@@ -1,32 +1,38 @@
-.d-none {
-    display: none !important;
-}
-
-.box, .card {
-    color: var(--on-navgroup);
-    background-color: var(--navgroup-bg);
-    padding: 1.5rem;
-    margin: 1rem;
+.content {
     border-radius: 2rem;
     transition: 0.3s;
 }
 
-.card-title, .card-content, .card-footer {
+.box {
+    border-radius: 2rem;
     margin: 1rem;
-    padding: 0rem;
+    padding: 2rem;
+    background-color: var(--bs-info-bg-subtle);
+    border: none;
+    transition: 0.3s;
 }
 
-.card-title *, .card-content *, .card-footer * {
-    margin: 0rem;
+a.card-link {
+    color: var(--text-body);
 }
 
-.stats {
-    font-family: 'JetBrains Mono', monospace;
+.btn-outline-info {
+    color: var(--bs-info-text-emphasis);
 }
 
-.stats .stat {
-    display: inline-block;
-    margin-right: 0.5rem;
+.btn-outline-info:not(.active):not(.activetab):hover {
+    background-color: var(--bs-info);
+}
+
+.btn-outline-info.active,
+.btn-outline-info.activetab {
+    background-color: var(--bs-info-text-emphasis);
+    color: var(--bs-info-bg-subtle);
+}
+
+button.active:hover,
+button.activetab:hover {
+    cursor: default;
 }
 
 .hiddenUp {
@@ -53,20 +59,11 @@
     transform: translateX(100%);
 }
 
-.show {
+.shown {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
     transform: translateY(0);
-}
-
-.content {
-    animation: fadeEffect 1s;
-    border: none;
-    border-radius: 2rem;
-    margin: 1rem;
-    background-color: var(--page-bg);
-    transition: 0.3s;
 }
 
 .content ol {
@@ -84,24 +81,44 @@
     font-variation-settings: 'FILL' 1;
 }
 
+/* INVERTED ROUNDED CORNERS MASKS */
+:root {
+    --topleft-mask: radial-gradient(2rem at 100% 100%, #0000 100%, #000);
+    --topright-mask: radial-gradient(2rem at 0 100%, #0000 100%, #000);
+    --bottomleft-mask: radial-gradient(2rem at 100% 0, #0000 100%, #000);
+    --bottomright-mask: radial-gradient(2rem at 0 0, #0000 100%, #000);
+    --logo-mask: url("../res/img/logoMask.svg");
+}
+
 .inverted-topleft-corner,
 .inverted-topright-corner,
 .inverted-bottomleft-corner,
 .inverted-bottomright-corner,
 .bottomedge {
-  position: -webkit-fixed;
-  position: fixed;
-  z-index: 1;
-  transition: 0.3s;
-  background-color: var(--navgroup-bg);
-  margin: 0rem;
+    z-index: 1;
+    transition: 0.3s;
+    margin: 0rem;
+}
+
+.inverted-topleft-corner,
+.inverted-topright-corner,
+.inverted-bottomleft-corner,
+.inverted-bottomright-corner {
+    width: 2rem;
+    height: 2rem;
 }
 
 .inverted-topleft-corner,
 .inverted-topright-corner {
-    width: var(--border-radius-m);
-    height: var(--border-radius-m);
-    top: 3.5rem;
+    position: relative;
+    top: 0;
+}
+
+.inverted-bottomleft-corner,
+.inverted-bottomright-corner {
+    position: -webkit-fixed;
+    position: fixed;
+    bottom: 1rem;
 }
 
 .inverted-topleft-corner {
@@ -112,36 +129,32 @@
 }
 
 .inverted-topright-corner {
-    left: auto;
+    float: right;
     right: 1rem;
     -webkit-mask: var(--topright-mask);
     mask: var(--topright-mask);
     margin-bottom: -2rem;
 }
 
-.inverted-bottomleft-corner,
-.inverted-bottomright-corner {
-    width: var(--border-radius-m);
-    height: var(--border-radius-m);
-    bottom: 1rem;
-}
-
 .inverted-bottomleft-corner {
-  left: 1rem;
-  -webkit-mask: var(--bottomleft-mask);
-  mask: var(--bottomleft-mask);
+    left: 1rem;
+    -webkit-mask: var(--bottomleft-mask);
+    mask: var(--bottomleft-mask);
 }
 
 .inverted-bottomright-corner {
-  left: auto;
-  right: 1rem;
-  -webkit-mask: var(--bottomright-mask);
-  mask: var(--bottomright-mask);
+    left: auto;
+    right: 1rem;
+    -webkit-mask: var(--bottomright-mask);
+    mask: var(--bottomright-mask);
 }
 
 .bottomedge {
-  height: 1rem;
-  width: 100vw;
-  bottom: 0rem;
-  left: 0rem;
+    height: 1rem;
+    width: 100vw;
+    left: 0rem;
+    bottom: 0rem;
+    margin-top: auto;
+    position: -webkit-sticky;
+    position: sticky;
 }

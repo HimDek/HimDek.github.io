@@ -11,10 +11,10 @@ function opentab(evt, tabName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
-    document.getElementById("activetab").classList.remove("show");
+    document.getElementById("activetab").classList.remove("shown");
+    document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
     document.getElementById("activetab").addEventListener("transitionend", () => {
-        document.getElementById("activetab").innerHTML = document.getElementById(tabName.replace('tab', '')).innerHTML;
-        document.getElementById("activetab").classList.add("show");
+        document.getElementById("activetab").classList.add("shown");
     });
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.classList.add("active");
@@ -31,7 +31,7 @@ function opentab(evt, tabName) {
     const hiddenRight = document.querySelectorAll('.hiddenRight');
     hiddenRight.forEach(el => observer.observe(el));
 }
-  
+
 const urlParams = new URLSearchParams(window.location.search);
 const tab = urlParams.get('tab');
   
@@ -54,10 +54,10 @@ function Menu(icon) {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            entry.target.classList.add('shown');
         }
         else {
-            entry.target.classList.remove('show');
+            entry.target.classList.remove('shown');
         }
     });
 });
