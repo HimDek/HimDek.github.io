@@ -11,7 +11,7 @@ include("./scripts/header.js");
 include("./scripts/footer.js");
 include("./scripts/navbar.js");
 
-fetch("HimDek/README.md").then(function(response) {
+fetch("https://raw.githubusercontent.com/HimDek/HimDek/main/README.md").then(function(response) {
   response.text().then(function(text) {
       document.getElementById("readme").innerHTML = marked.parse(text);
   });
