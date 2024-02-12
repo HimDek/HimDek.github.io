@@ -61,7 +61,7 @@ fetch("https://api.github.com/users/HimDek/repos").then(res => res.json()).then(
 		}
 		count++;
 	}
-	document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + count + "</span>"
+	document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span class='badge rounded-pill bg-secondary'>" + count + "</span>"
 })
 
 fetch("https://api.github.com/users/HimDek/gists").then(res => res.json()).then((out) => {
@@ -73,5 +73,5 @@ fetch("https://api.github.com/users/HimDek/gists").then(res => res.json()).then(
 		}
 		count++;
 	}
-	document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + count + "</span>";
+	document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span class='badge rounded-pill bg-secondary'>" + count + "</span>";
 })
