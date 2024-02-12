@@ -161,12 +161,12 @@ button.activetab:hover {
 }
 
 .typing-demo {
-    width: 22ch;
+    width: 16ch;
     animation: typing 2s steps(17);
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 @keyframes typing {
