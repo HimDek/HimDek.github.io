@@ -19,17 +19,6 @@ function opentab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.classList.add("active");
     window.history.replaceState(null, null, "?tab=" + tabName.replace('tab', ''));
-    
-    document.querySelectorAll('.anb').forEach(element => element.classList.add('hiddenDown'));
-    document.querySelectorAll('.tabmenu, .activetab, .tablinks').forEach(element => element.classList.add('hiddenLeft'));
-    const hiddenUp = document.querySelectorAll('.hiddenUp');
-    hiddenUp.forEach(el => observer.observe(el));
-    const hiddenDown = document.querySelectorAll('.hiddenDown');
-    hiddenDown.forEach(el => observer.observe(el));
-    const hiddenLeft = document.querySelectorAll('.hiddenLeft');
-    hiddenLeft.forEach(el => observer.observe(el));
-    const hiddenRight = document.querySelectorAll('.hiddenRight');
-    hiddenRight.forEach(el => observer.observe(el));
 }
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -50,14 +39,3 @@ function Menu(icon) {
         x.className = "tab";
     }
 }
-  
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('shown');
-        }
-        else {
-            entry.target.classList.remove('shown');
-        }
-    });
-});

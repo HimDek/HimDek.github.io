@@ -42,17 +42,6 @@ function init() {
 	document.getElementById("activetab").addEventListener("transitionend", () => {
 		document.getElementById("activetab").classList.add("shown");
 	});
-
-	document.querySelectorAll('.anb').forEach(element => element.classList.add('hiddenDown'));
-	document.querySelectorAll('.tabmenu, .activetab, .tablinks').forEach(element => element.classList.add('hiddenLeft'));
-	const hiddenUp = document.querySelectorAll('.hiddenUp');
-	hiddenUp.forEach(el => observer.observe(el));
-	const hiddenDown = document.querySelectorAll('.hiddenDown');
-	hiddenDown.forEach(el => observer.observe(el));
-	const hiddenLeft = document.querySelectorAll('.hiddenLeft');
-	hiddenLeft.forEach(el => observer.observe(el));
-	const hiddenRight = document.querySelectorAll('.hiddenRight');
-	hiddenRight.forEach(el => observer.observe(el));
 }
 
 function Menu(icon) {
@@ -64,14 +53,4 @@ function Menu(icon) {
 	}
 }
 
-const observer = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add('shown');
-		}
-		else {
-			entry.target.classList.remove('shown');
-		}
-	});
-});
 

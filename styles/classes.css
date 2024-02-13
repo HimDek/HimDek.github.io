@@ -41,27 +41,41 @@ button.activetab:hover {
 }
 
 .hiddenUp {
+    transition: transform 0.5s ease;
     opacity: 0;
     filter: blur(5px);
     transform: translateY(-100%);
 }
 
 .hiddenDown {
+    transition: transform 0.5s ease;
     opacity: 0;
     filter: blur(5px);
     transform: translateY(100%);
 }
 
 .hiddenLeft {
+    transition: transform 0.5s ease;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
 }
 
 .hiddenRight {
+    transition: transform 0.5s ease;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(100%);
+}
+
+.hiddenY {
+    transition: transform 0.5s ease;
+    transform: scaleY(0);
+}
+
+.hiddenX {
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
 }
 
 .shown {
@@ -69,6 +83,15 @@ button.activetab:hover {
     filter: blur(0);
     transform: translateX(0);
     transform: translateY(0);
+}
+
+.shrunk {
+    transition: transform 0.5s ease;
+    transform: scale(0);
+}
+
+.expanded {
+    transform: scale(1);
 }
 
 .content ol {
@@ -163,6 +186,11 @@ button.activetab:hover {
     margin-top: auto;
     position: -webkit-sticky;
     position: sticky;
+}
+
+.wrapper {
+    display: block;
+    width: fit-content;
 }
 
 .typing-demo {
