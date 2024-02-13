@@ -15,6 +15,10 @@ fetch("/repo-footer.htm").then(function (response) {
     });
 });
 
+document.querySelectorAll('header').forEach(el => {
+    el.remove();
+});
+
 include("/scripts/navlinks.js");
 include("/scripts/readme.js");
 include("/scripts/themeToggle.js");
