@@ -27,12 +27,12 @@ theme.appendChild(themebutton);
 navbar.appendChild(theme);
 
 function lightTheme() {
-    themeIcon.textContent = "dark_mode";
+    document.getElementById("theme-icon").innerHTML = "dark_mode";
     document.getElementById('body').setAttribute('data-bs-theme', 'light');
 }
 
 function darkTheme() {
-    themeIcon.textContent = "light_mode";
+    document.getElementById("theme-icon").innerHTML = "light_mode";
     document.getElementById('body').setAttribute('data-bs-theme', 'dark');
 }
 
