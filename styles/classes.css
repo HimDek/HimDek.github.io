@@ -14,6 +14,11 @@
 
 a.card-link {
     color: var(--text-body);
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.ff-mono {
+    font-family: 'JetBrains Mono', monospace !important;
 }
 
 .btn-outline-info {
@@ -162,11 +167,11 @@ button.activetab:hover {
 
 .typing-demo {
     width: 16ch;
-    animation: typing 2s steps(17);
+    animation: typing 2s steps(16);
     white-space: nowrap;
     overflow: hidden;
-    font-family: monospace;
-    font-size: 1.4em;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 2em;
 }
 
 @keyframes typing {

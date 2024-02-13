@@ -7,7 +7,7 @@
 
 body {
   margin: 0px;
-  min-width: 350px;
+  min-width: 400px;
   font-family: 'Lexend Deca', sans-serif !important;
   font-size: 1rem;
   transition: 0.3s;
@@ -42,7 +42,6 @@ svg {
 }
 
 img {
-  margin: 20px;
   max-width: -webkit-fill-available;
   transition: 0.3s;
 }
