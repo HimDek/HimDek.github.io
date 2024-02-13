@@ -2,13 +2,16 @@ function include(file) {
     var script = document.createElement('script');
     script.src = file;
     script.type = 'text/javascript';
-    script.defer = true; 
+    script.defer = true;
     document.getElementsByTagName('head').item(0).appendChild(script);
 }
 
-fetch("/repo-footer.htm").then(function(response) {
-    response.text().then(function(text) {
+fetch("/repo-footer.htm").then(function (response) {
+    response.text().then(function (text) {
         document.getElementById("footer").innerHTML = text;
+        document.querySelectorAll(".repo-name").forEach(el => {
+            el.innerHTML = document.title
+        });
     });
 });
 

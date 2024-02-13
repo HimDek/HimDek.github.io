@@ -171,7 +171,6 @@ button.activetab:hover {
     white-space: nowrap;
     overflow: hidden;
     font-family: 'JetBrains Mono', monospace !important;
-    font-size: 2em;
 }
 
 @keyframes typing {
