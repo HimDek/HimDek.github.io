@@ -177,6 +177,7 @@ button.activetab:hover {
     0% {
         width: 0
     }
+
     100% {
         width: 100%;
     }
@@ -186,4 +187,42 @@ button.activetab:hover {
     50% {
         border-color: transparent
     }
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-contain {
+    background-size: contain;
+}
+
+.bg-stretch {
+    background-size: 100% 100%;
+}
+
+.bg-paint-1,
+.bg-paint-2,
+.bg-paint-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tablinks.active {
+    background-size: 100% 100%;
+    background-image: url('/assets/backgrounds/paint1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-paint-1 {
+    background-image: url('/assets/backgrounds/paint1.png');
+}
+
+.bg-paint-2 {
+    background-image: url('/assets/backgrounds/paint2.png');
+}
+
+.bg-paint-3 {
+    background-image: url('/assets/backgrounds/paint3.png');
 }

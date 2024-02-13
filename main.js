@@ -7,12 +7,23 @@ function include(file) {
 }
 
 include("./scripts/themeToggle.js");
-include("./scripts/header.js");
-include("./scripts/footer.js");
 include("./scripts/navbar.js");
 
 fetch("https://raw.githubusercontent.com/HimDek/HimDek/main/README.md").then(function(response) {
   response.text().then(function(text) {
       document.getElementById("readme").innerHTML = marked.parse(text);
+      const typing = document.querySelectorAll('.typing');
+      typing.forEach(el => typingobserver.observe(el));
+  });
+});
+
+const typingobserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('typing-demo');
+      }
+      else {
+          entry.target.classList.remove('typing-demo');
+      }
   });
 });

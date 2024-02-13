@@ -68,6 +68,7 @@ a:hover img {
 
 header,
 footer {
+  position: relative;
   font-family: 'Lexend Zetta', sans-serif !important;
   transition: 0.3s;
   z-index: 2;
