@@ -10,7 +10,7 @@ fetch("/repo-footer.htm").then(function (response) {
     response.text().then(function (text) {
         document.getElementById("footer").innerHTML = text;
         document.querySelectorAll(".repo-name").forEach(el => {
-            el.innerHTML = document.title
+            el.innerHTML = document.title.split('|')[0];
         });
     });
 });
