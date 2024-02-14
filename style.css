@@ -27,7 +27,12 @@ button {
   transition: 0.3s;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lexend Zetta', sans-serif !important;
 }
 
@@ -52,7 +57,8 @@ a {
   transition: 0.3s;
 }
 
-a:hover, a:hover *:not(p) {
+a:hover,
+a:hover *:not(p) {
   text-shadow: 0px 0px 10px var(--bs-info-text-emphasis);
   color: var(--bs-info-text-emphasis);
 }
@@ -73,6 +79,22 @@ a h1 {
 a:hover h1 {
   text-shadow: 0px 0px 15px #fcef23, 0px 0px 20px #77df76, 0px 0px 40px #79ebf5;
   transform: scale(1.1);
+}
+
+a span span  {
+  transition: transform 0.6s ease;
+}
+
+a span span svg {
+  transition: transform 0.3s ease;
+}
+
+a:hover span span {
+  transform: scale(1.1);
+}
+
+a:hover span span svg {
+  transform: scale(1.3);
 }
 
 header,
