@@ -18,7 +18,8 @@ body::-webkit-scrollbar {
 }
 
 button {
-  font-family: 'Lexend Zetta', sans-serif !important;
+  font-family: 'JetBrains Mono', sans-serif !important;
+  font-weight: bold;
   padding: 0.5rem;
   font-size: 1rem;
   margin: 0.5rem 0.2rem;
@@ -34,6 +35,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lexend Zetta', sans-serif !important;
+  font-weight: 600;
 }
 
 pre {
@@ -53,23 +55,23 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--bs-info-text-emphasis);
+  color: var(--bs-primary-text-emphasis);
   transition: 0.3s;
 }
 
 a:hover,
 a:hover *:not(p) {
-  text-shadow: 0px 0px 10px var(--bs-info-text-emphasis);
-  color: var(--bs-info-text-emphasis);
+  text-shadow: 0px 0px 10px var(--bs-primary-text-emphasis);
+  color: var(--bs-primary-text-emphasis);
 }
 
 a:hover svg {
   filter: drop-shadow(0px 0px 10px rgb(47 128 237));
-  fill: var(--bs-info-text-emphasis);
+  fill: var(--bs-primary-text-emphasis);
 }
 
 a:hover img {
-  box-shadow: 0px 0px 10px var(--bs-info-text-emphasis);
+  box-shadow: 0px 0px 10px var(--bs-primary-text-emphasis);
 }
 
 a h1 {
@@ -77,11 +79,11 @@ a h1 {
 }
 
 a:hover h1 {
-  text-shadow: 0px 0px 15px #fcef23, 0px 0px 20px #77df76, 0px 0px 40px #79ebf5;
+  text-shadow: 0px 0px 20px var(--bs-warning), 0px 0px 40px var(--bs-success), 0px 0px 10px var(--bs-primary);
   transform: scale(1.1);
 }
 
-a span span  {
+a span span {
   transition: transform 0.6s ease;
 }
 

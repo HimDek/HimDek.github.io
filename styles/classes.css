@@ -7,32 +7,18 @@
     border-radius: 2rem;
     margin: 1rem;
     padding: 2rem;
-    background-color: var(--bs-info-bg-subtle);
+    background-color: var(--bs-primary-bg-subtle);
     border: none;
     transition: 0.3s;
 }
 
-a.card-link {
+.card-link {
     color: var(--text-body);
     font-family: 'JetBrains Mono', monospace !important;
 }
 
 .ff-mono {
     font-family: 'JetBrains Mono', monospace !important;
-}
-
-.btn-outline-info {
-    color: var(--bs-info-text-emphasis);
-}
-
-.btn-outline-info:not(.active):not(.activetab):hover {
-    background-color: var(--bs-info);
-}
-
-.btn-outline-info.active,
-.btn-outline-info.activetab {
-    background-color: var(--bs-info-text-emphasis);
-    color: var(--bs-info-bg-subtle);
 }
 
 button.active:hover,
@@ -276,11 +262,17 @@ button.activetab:hover {
 .bg-animated-text {
     color: rgba(225, 225, 225, .01);
     background: linear-gradient(to right,
-            #b9e64c,
+            var(--bs-danger),
+            var(--bs-warning),
+            var(--bs-success),
             var(--bs-info),
-            #b9e64c,
+            var(--bs-primary),
+            var(--bs-danger),
+            var(--bs-warning),
+            var(--bs-success),
             var(--bs-info),
-            #b9e64c);
+            var(--bs-primary),
+            var(--bs-danger));
     background-size: 200% auto;
     background-repeat: repeat;
     background-clip: text;
@@ -307,12 +299,12 @@ a:hover .img-box img {
 }
 
 a .shadow-box {
-    box-shadow: -5px -5px 10px #02d1c0, 5px -5px 10px #56db8b, 5px 5px 10px #f6ed25, -5px 5px 10px #b9e64c;
+    box-shadow: -5px -5px 10px var(--bs-success), 5px -5px 10px var(--bs-primary), 5px 5px 10px var(--bs-warning), -5px 5px 10px var(--bs-info);
     transition: box-shadow, transform 0.3s ease;
 }
 
 a:hover .shadow-box {
-    box-shadow: -5px -5px 20px #02d1c0, 5px -5px 20px #56db8b, 5px 5px 20px #f6ed25, -5px 5px 20px #b9e64c;
+    box-shadow: -5px -5px 20px var(--bs-success), 5px -5px 20px var(--bs-primary), 5px 5px 20px var(--bs-warning), -5px 5px 20px var(--bs-info);
     animation: rotate-shadow 1s infinite 0.3s;
 }
 
@@ -320,18 +312,18 @@ a:hover .shadow-box {
 
     0%,
     100% {
-        box-shadow: -5px -5px 20px #02d1c0, 5px -5px 20px #56db8b, 5px 5px 20px #f6ed25, -5px 5px 20px #b9e64c;
+        box-shadow: -5px -5px 20px var(--bs-success), 5px -5px 20px var(--bs-primary), 5px 5px 20px var(--bs-warning), -5px 5px 20px var(--bs-info);
     }
 
     25% {
-        box-shadow: -5px -5px 20px #b9e64c, 5px -5px 20px #02d1c0, 5px 5px 20px #56db8b, -5px 5px 20px #f6ed25;
+        box-shadow: -5px -5px 20px var(--bs-info), 5px -5px 20px var(--bs-success), 5px 5px 20px var(--bs-primary), -5px 5px 20px var(--bs-warning);
     }
 
     50% {
-        box-shadow: -5px -5px 20px #f6ed25, 5px -5px 20px #b9e64c, 5px 5px 20px #02d1c0, -5px 5px 20px #56db8b;
+        box-shadow: -5px -5px 20px var(--bs-warning), 5px -5px 20px var(--bs-info), 5px 5px 20px var(--bs-success), -5px 5px 20px var(--bs-primary);
     }
 
     75% {
-        box-shadow: -5px -5px 20px #56db8b, 5px -5px 20px #f6ed25, 5px 5px 20px #b9e64c, -5px 5px 20px #02d1c0;
+        box-shadow: -5px -5px 20px var(--bs-primary), 5px -5px 20px var(--bs-warning), 5px 5px 20px var(--bs-info), -5px 5px 20px var(--bs-success);
     }
 }

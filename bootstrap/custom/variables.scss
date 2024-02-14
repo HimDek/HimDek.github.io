@@ -1,0 +1,22 @@
+$accent: #88C0D0;
+$primary: #5E81AC;
+$secondary: #81A1C1;
+$success: #A3BE8C;
+$warning: #EBCB8B;
+$danger: #BF616A;
+
+$accent-text-emphasis: shade-color($accent, 60%);
+
+$accent-bg-subtle: tint-color($accent, 80%);
+
+$accent-border-subtle: tint-color($accent, 60%);
+
+$accent-text-emphasis-dark: tint-color($accent, 40%);
+
+$accent-bg-subtle-dark: shade-color($accent, 80%);
+
+$accent-border-subtle-dark: shade-color($accent, 40%);
+
+$body-bg: #D8DEE9;
+
+$body-bg-dark: #2E3440;

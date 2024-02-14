@@ -5,11 +5,11 @@ themebutton = document.createElement("button");
 themeIcon = document.createElement("div");
 
 theme.classList.add("navright");
-themebutton.classList.add("my-0");
+themebutton.classList.add("my-1");
 themebutton.classList.add("px-2");
 themebutton.classList.add("pt-2");
 themebutton.classList.add("btn");
-themebutton.classList.add("btn-outline-info");
+themebutton.classList.add("btn-outline-primary");
 themebutton.classList.add("rounded-circle");
 themebutton.classList.add("border");
 themebutton.classList.add("border-0");

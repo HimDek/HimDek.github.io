@@ -1,0 +1,60 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "./source/scss/functions";
+
+// 2. Include any default variable overrides here
+@import "./custom/variables";
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "./source/scss/variables";
+@import "./source/scss/variables-dark";
+
+// 4. Include any default map overrides here
+@import "./custom/map-amends";
+
+// 5. Include remainder of required parts
+@import "./source/scss/maps";
+@import "./source/scss/mixins";
+@import "./source/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "./source/scss/utilities";
+@import "./source/scss/reboot";
+@import "./source/scss/type";
+@import "./source/scss/images";
+@import "./source/scss/containers";
+@import "./source/scss/grid";
+@import "./source/scss/tables";
+@import "./source/scss/forms";
+@import "./source/scss/buttons";
+@import "./source/scss/transitions";
+@import "./source/scss/dropdown";
+@import "./source/scss/button-group";
+@import "./source/scss/nav";
+@import "./source/scss/navbar";
+@import "./source/scss/card";
+@import "./source/scss/accordion";
+@import "./source/scss/breadcrumb";
+@import "./source/scss/pagination";
+@import "./source/scss/badge";
+@import "./source/scss/alert";
+@import "./source/scss/progress";
+@import "./source/scss/list-group";
+@import "./source/scss/close";
+@import "./source/scss/toasts";
+@import "./source/scss/modal";
+@import "./source/scss/tooltip";
+@import "./source/scss/popover";
+@import "./source/scss/carousel";
+@import "./source/scss/spinners";
+@import "./source/scss/offcanvas";
+@import "./source/scss/placeholders";
+
+@import "./source/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "./source/scss/utilities/api";
+
+// 8. Add additional custom code here
