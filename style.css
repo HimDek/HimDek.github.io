@@ -66,10 +66,18 @@ a:hover img {
   box-shadow: 0px 0px 10px var(--bs-info-text-emphasis);
 }
 
+a h1 {
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover h1 {
+  text-shadow: 0px 0px 15px #fcef23, 0px 0px 20px #77df76, 0px 0px 40px #79ebf5;
+  transform: scale(1.1);
+}
+
 header,
 footer {
   position: relative;
-  font-family: 'Lexend Zetta', sans-serif !important;
   transition: 0.3s;
   z-index: 2;
 }

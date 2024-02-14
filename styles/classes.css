@@ -195,15 +195,16 @@ button.activetab:hover {
 
 .typing-demo {
     width: 16ch;
-    animation: typing 2s steps(16);
+    animation: typing 0s linear 0s 0 normal forwards, typing 2s steps(16) 0.5s 1 normal forwards, blink 1s linear 2.5s 5 normal forwards;
     white-space: nowrap;
     overflow: hidden;
     font-family: 'JetBrains Mono', monospace !important;
+    border-right: 2px solid;
 }
 
 @keyframes typing {
     0% {
-        width: 0
+        width: 0%;
     }
 
     100% {
@@ -212,8 +213,12 @@ button.activetab:hover {
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent
+    from {
+        border-right: 2px solid;
+    }
+
+    to {
+        border-right: none;
     }
 }
 
@@ -221,12 +226,16 @@ button.activetab:hover {
     background-size: cover;
 }
 
-.bg-contain {
-    background-size: contain;
-}
-
 .bg-stretch {
     background-size: 100% 100%;
+}
+
+.bg-contain {
+    background-size: 0%;
+}
+
+.bg-contain.bg-show {
+    background-size: 100%;
 }
 
 .bg-paint-1,
@@ -234,6 +243,7 @@ button.activetab:hover {
 .bg-paint-3 {
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
 }
 
 .tablinks.active {
@@ -261,4 +271,67 @@ button.activetab:hover {
 
 .img-box:hover img {
     transform: scale(1.1);
+}
+
+.bg-animated-text {
+    color: rgba(225, 225, 225, .01);
+    background: linear-gradient(to right,
+            #b9e64c,
+            var(--bs-info),
+            #b9e64c,
+            var(--bs-info),
+            #b9e64c);
+    background-size: 200% auto;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: textShine 2s ease-in-out infinite;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+a .img-box img {
+    transition: transform 0.5s ease-out;
+}
+
+a:hover .img-box img {
+    transform: scale(1.1);
+}
+
+a .shadow-box {
+    box-shadow: -5px -5px 10px #02d1c0, 5px -5px 10px #56db8b, 5px 5px 10px #f6ed25, -5px 5px 10px #b9e64c;
+    transition: box-shadow, transform 0.3s ease;
+}
+
+a:hover .shadow-box {
+    box-shadow: -5px -5px 20px #02d1c0, 5px -5px 20px #56db8b, 5px 5px 20px #f6ed25, -5px 5px 20px #b9e64c;
+    animation: rotate-shadow 1s infinite 0.3s;
+}
+
+@keyframes rotate-shadow {
+
+    0%,
+    100% {
+        box-shadow: -5px -5px 20px #02d1c0, 5px -5px 20px #56db8b, 5px 5px 20px #f6ed25, -5px 5px 20px #b9e64c;
+    }
+
+    25% {
+        box-shadow: -5px -5px 20px #b9e64c, 5px -5px 20px #02d1c0, 5px 5px 20px #56db8b, -5px 5px 20px #f6ed25;
+    }
+
+    50% {
+        box-shadow: -5px -5px 20px #f6ed25, 5px -5px 20px #b9e64c, 5px 5px 20px #02d1c0, -5px 5px 20px #56db8b;
+    }
+
+    75% {
+        box-shadow: -5px -5px 20px #56db8b, 5px -5px 20px #f6ed25, 5px 5px 20px #b9e64c, -5px 5px 20px #02d1c0;
+    }
 }
