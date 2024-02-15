@@ -1,14 +1,4 @@
 .content {
-    border-radius: 2rem;
-    transition: 0.3s;
-}
-
-.box {
-    border-radius: 2rem;
-    margin: 1rem;
-    padding: 2rem;
-    background-color: var(--bs-primary-bg-subtle);
-    border: none;
     transition: 0.3s;
 }
 
@@ -326,4 +316,104 @@ a:hover .shadow-box {
     75% {
         box-shadow: -5px -5px 20px var(--bs-primary), 5px -5px 20px var(--bs-warning), 5px 5px 20px var(--bs-info), -5px 5px 20px var(--bs-success);
     }
+}
+
+.sticky-wrap {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.horizontal-scroll {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horizontal-scroll>* {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horizontal-scroll>*>* {
+    height: 100%;
+}
+
+.horizontal-scroll p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* if you do not have this, you will see a 
+vertical scrollbar on the .parallax div */
+body {
+    margin: 0;
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 1px;
+
+    ::-webkit-scrollbar {
+        display: none;
+        /* Chrome Safari */
+    }
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.layer-1 {
+    transform: translateZ(0);
+}
+
+.layer-2 {
+    transform: translateZ(-1px) scale(2);
+}
+
+.layer-3 {
+    transform: translateZ(-2px) scale(3);
+}
+
+.layer-4 {
+    transform: translateZ(-3px) scale(4);
+}
+
+.parallax-layer.layer-1 {
+    top: 270rem;
+}
+
+.parallax-layer.layer-2 {
+    top: 85rem;
+}
+
+.parallax-layer.layer-3 {
+    top: 165rem;
+}
+
+.parallax-layer.layer-4 {
+    top: 50rem;
 }

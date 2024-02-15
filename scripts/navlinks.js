@@ -31,7 +31,6 @@ fetch("/tab.htm").then(function (response) {
 });
 
 function init() {
-	console.log("Initing")
 	var i, tablinks;
 
 	tablinks = document.getElementsByClassName("tablinks");

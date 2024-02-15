@@ -24,13 +24,9 @@ function opentab(evt, tabName) {
 const urlParams = new URLSearchParams(window.location.search);
 const tab = urlParams.get('tab');
   
-document.addEventListener("loaded", hasloaded, false);
+document.getElementById('home').click();
+document.getElementById(tab).click();
 
-function hasloaded(e) {
-    document.getElementById('home').click();
-    document.getElementById(tab).click();
-}
-  
 function Menu(icon) {
     var x = document.getElementById("tabbar");
     if (x.className === "tab") {
