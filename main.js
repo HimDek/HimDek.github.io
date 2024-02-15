@@ -36,7 +36,6 @@ function execute() {
   document.addEventListener("loaded", hasloaded, false);
   function hasloaded(e) {
     observeanimation()
-    hybridScroll()
     window.setTimeout(() => {
       document.querySelectorAll('.card').forEach(el => {
         el.classList.add("container-sm")
