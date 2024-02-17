@@ -21,4 +21,4 @@ include("/scripts/navlinks.js");
 include("/scripts/readme.js");
 include("/scripts/themeToggle.js");
 include("/scripts/observeanimation.js");
-include("./scripts/scrolleffect.js");
+include("/scripts/scrolleffect.js");

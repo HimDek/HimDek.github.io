@@ -16,7 +16,7 @@ fetch("/repopagetemplate.html").then(function (response) {
         include("/scripts/navlinks.js");
         include("/scripts/themeToggle.js");
         include("/scripts/observeanimation.js");
-        include("./scripts/scrolleffect.js");
+        include("/scripts/scrolleffect.js");
 
         fetch("./README.md").then(function (response) {
             response.text().then(function (text) {

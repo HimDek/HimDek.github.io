@@ -16,12 +16,12 @@ function include(url, callback = null) {
 
 loadedScriptCount = 0
 
-include("./scripts/themeToggle.js", scriptLoaded);
-include("./scripts/navbar.js", scriptLoaded);
-include("./scripts/observeanimation.js", scriptLoaded);
-include("./scripts/scrolleffect.js", scriptLoaded);
-include("./scripts/gitlist.js", scriptLoaded);
-// include("./scripts/hybridscroll.js", scriptLoaded);
+include("/scripts/themeToggle.js", scriptLoaded);
+include("/scripts/navbar.js", scriptLoaded);
+include("/scripts/observeanimation.js", scriptLoaded);
+include("/scripts/scrolleffect.js", scriptLoaded);
+include("/scripts/gitlist.js", scriptLoaded);
+// include("/scripts/hybridscroll.js", scriptLoaded);
 
 function scriptLoaded() {
   loadedScriptCount++
