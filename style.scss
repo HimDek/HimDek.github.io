@@ -354,3 +354,8 @@ a:hover {
         transform: scale(1);
     }
 }
+
+html,
+body {
+    overflow-x: hidden;
+}

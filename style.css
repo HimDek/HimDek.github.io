@@ -12637,3 +12637,7 @@ a:hover .shadow-box {
     transform: scale(1);
   }
 }
+html,
+body {
+  overflow-x: hidden;
+}
