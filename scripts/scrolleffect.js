@@ -114,7 +114,7 @@ function transform(section) {
     const horizontalScrollSection = section.querySelector('.horizontal-scroll-section')
     horizontalScrollSectionWidth = parseInt(window.getComputedStyle(horizontalScrollSection).width.slice(0, -2))
 
-    horizontalScrollSection.parentElement.parentElement.style.height = horizontalScrollSectionWidth + "px"
+    horizontalScrollSection.parentElement.parentElement.style.height = horizontalScrollSectionWidth + window.innerWidth + "px"
 
     offset = offset < 0 ? 0 : offset > horizontalScrollSectionWidth - window.innerWidth ? horizontalScrollSectionWidth - window.innerWidth : offset;
 
