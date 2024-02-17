@@ -19,12 +19,15 @@ loadedScriptCount = 0
 include("./scripts/themeToggle.js", scriptLoaded);
 include("./scripts/navbar.js", scriptLoaded);
 include("./scripts/observeanimation.js", scriptLoaded);
+include("./scripts/scrolleffect.js", scriptLoaded);
+include("./scripts/gitlist.js", scriptLoaded);
 // include("./scripts/hybridscroll.js", scriptLoaded);
 
 function scriptLoaded() {
   loadedScriptCount++
 
-  if (loadedScriptCount == 3) {
+  if (loadedScriptCount == 5) {
+    observeanimation()
     execute()
   }
 }
@@ -36,21 +39,22 @@ function execute() {
   document.addEventListener("loaded", hasloaded, false);
   function hasloaded(e) {
     observeanimation()
-    window.setTimeout(() => {
-      document.querySelectorAll('.card').forEach(el => {
-        el.classList.add("container-sm")
-        el.classList.add("my-3")
-        el.classList.add("my-sm-4")
-        el.classList.add("my-md-5")
-        el.classList.add("p-1")
-        el.classList.add("p-sm-2")
-        el.classList.add("p-md-3")
-        el.classList.add("rounded-5")
-        el.classList.add("border-0")
-        el.classList.add("bg-primary-subtle")
-      });
-    }, 1000)
   }
+
+  fetch("https://api.github.com/users/HimDek").then(res => res.json()).then((out) => {
+    document.querySelectorAll('.my-address').forEach(el => el.innerHTML = out.location)
+    document.querySelectorAll('.github-followers-count').forEach(el => el.innerHTML = out.followers)
+    document.querySelectorAll('.repos-count').forEach(el => el.innerHTML = out.public_repos)
+    document.querySelectorAll('.gists-count').forEach(el => el.innerHTML = out.public_gists)
+  });
+
+  fetch("https://api.github.com/search/issues?q=is:pr+author:HimDek+is:merged").then(res => res.json()).then((out) => {
+    document.querySelectorAll('.github-merged-pr-count').forEach(el => el.innerHTML = out.total_count)
+  });
+
+  fetch("https://api.github.com/search/commits?q=author:HimDek").then(res => res.json()).then((out) => {
+    document.querySelectorAll('.github-commits-count').forEach(el => el.innerHTML = out.total_count)
+  });
 
   fetch("https://raw.githubusercontent.com/HimDek/HimDek/main/README.md").then(function (response) {
     response.text().then(function (text) {
@@ -62,7 +66,6 @@ function execute() {
   listrepos("HimDek", document.getElementById("repos-container")).then(reposcount => {
     document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span class='badge rounded-pill bg-secondary'>" + reposcount.toString() + "</span>"
     document.dispatchEvent(loaded)
-
   });
 
   listgists("HimDek", document.getElementById("gists-container")).then(gistscount => {
