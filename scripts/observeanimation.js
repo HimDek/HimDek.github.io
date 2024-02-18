@@ -1,8 +1,7 @@
 function observeanimation() {
     document.getElementById('theme-icon').classList.add('shrunk');
     document.querySelectorAll('.typing').forEach(el => typingobserver.observe(el));
-    document.querySelectorAll('.anb').forEach(element => element.classList.add('shrunk'));
-    document.querySelectorAll('.badge').forEach(element => element.classList.add('shrunk'));
+    document.querySelectorAll('.anb, .badge').forEach(element => element.classList.add('shrunk'));
     document.querySelectorAll('.tabmenu, .activetab, .tablinks').forEach(element => element.classList.add('hiddenLeft'));
     document.querySelectorAll('.hiddenUp').forEach(el => observer.observe(el));
     document.querySelectorAll('.hiddenDown').forEach(el => observer.observe(el));

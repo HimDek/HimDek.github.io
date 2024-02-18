@@ -40,7 +40,7 @@ function markedLoaded() {
             fetch('https://api.github.com/repos/HimDek/' + reponame).then(res => res.json()).then((out) => {
                 url = out.html_url;
                 desc = (out.description == null) ? "" : out.description;
-                stats = document.getElementById("stats")
+                stats = document.querySelectorAll(".repo-stats-list")
                 console.log("OK")
 
                 if (out.has_pages)
@@ -105,10 +105,10 @@ function markedLoaded() {
                 li.classList.add("bg-transparent")
                 li.appendChild(a)
 
-                stats.appendChild(li)
+                stats.forEach(el => el.appendChild(li.cloneNode(true)))
 
                 if (out.language != null) {
-                    svg = "<svg style=\"padding: 0px; margin:0;\" height=\"26\" width=\"26\"><circle id=\"" + out.id + "\" cx=\"13\" cy=\"13\" r=\"12\" stroke=\"white\" stroke-width=\"1\"></circle></svg>"
+                    svg = "<svg style=\"padding: 0px; margin:0;\" height=\"26\" width=\"26\"><circle class=\"c-" + out.id + "\" cx=\"13\" cy=\"13\" r=\"12\" stroke=\"white\" stroke-width=\"1\"></circle></svg>"
 
                     value = document.createElement("div")
                     value.classList.add("fs-5")
@@ -146,8 +146,8 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(span)
 
-                    stats.appendChild(li)
-                    colorize(out.id, out.language);
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
+                    colorize("c-" + out.id, out.language);
                 }
 
                 if (out.stargazers_count >= 1) {
@@ -194,7 +194,7 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(a)
 
-                    stats.appendChild(li)
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
                 }
 
                 if (out.forks >= 1) {
@@ -241,7 +241,7 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(a)
 
-                    stats.appendChild(li)
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
                 }
 
                 if (out.open_issues >= 1) {
@@ -288,7 +288,7 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(a)
 
-                    stats.appendChild(li)
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
                 }
 
                 if (out.license != null) {
@@ -335,7 +335,7 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(a)
 
-                    stats.appendChild(li)
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
                 }
                 scriptLoaded()
             });
@@ -383,7 +383,7 @@ function markedLoaded() {
                     li.classList.add("bg-transparent")
                     li.appendChild(a)
 
-                    stats.appendChild(li)
+                    stats.forEach(el => el.appendChild(li.cloneNode(true)))
                 }
                 scriptLoaded()
             });
@@ -412,11 +412,11 @@ fetch("/repopagetemplate.html").then(function (response) {
     });
 });
 
-function colorize(id, lang) {
+function colorize(classname, lang) {
     fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(res => res.json()).then((col) => {
         for (const x in col)
             if (x == lang)
-                document.getElementById(id).setAttribute("fill", col[x].color);
+                document.querySelectorAll("." + classname).forEach(el => el.setAttribute("fill", col[x].color));
     });
 }
 

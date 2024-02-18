@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lexend Zetta", sans-serif !important;
+  font-family: 'Lexend Zetta', sans-serif !important;
   font-weight: 600;
 }
 
@@ -52,7 +52,7 @@ a:hover *:not(p) {
 }
 
 a:hover svg {
-  filter: drop-shadow(0px 0px 10px rgb(47, 128, 237));
+  filter: drop-shadow(0px 0px 10px rgb(47 128 237));
   fill: var(--bs-primary-text-emphasis);
 }
 

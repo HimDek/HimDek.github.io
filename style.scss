@@ -1,12 +1,10 @@
-/* @import "styles/variables.css"; */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import "bootstrap/main";
-@import "custom.css";
-// @import "styles/animations.css";
+@import "custom";
 @import "styles/navbar";
 @import "styles/animatedLinks";
-@import "styles/classes.css";
-@import "styles/fonts.css";
+@import "styles/classes";
+@import "styles/fonts";
 
 * {
     transition-property: background-color;
@@ -29,18 +27,26 @@
     }
 }
 
-.card .card-stats {
-    @extend .d-flex;
-    @extend .flex-wrap;
-    @extend .justify-content-start;
-    @extend .align-items-center;
-    @extend .fs-7;
+.card {
+    .card-body {
+        @extend .p-0;
+        @extend .m-2;
+        @extend .overflow-x-clip;
+    }
 
-    >* {
+    .card-stats {
         @extend .d-flex;
-        @extend .align-items-center;
+        @extend .flex-wrap;
         @extend .justify-content-start;
-        @extend .pe-2;
+        @extend .align-items-center;
+        @extend .fs-7;
+
+        >* {
+            @extend .d-flex;
+            @extend .align-items-center;
+            @extend .justify-content-start;
+            @extend .pe-2;
+        }
     }
 }
 
@@ -193,6 +199,23 @@ a:hover {
     @extend .scale-in-out-right;
 }
 
+.scale-out-center {
+    animation: scale-out linear both;
+    animation-timeline: view();
+    animation-range: cover 50% cover 80%;
+}
+
+@keyframes scale-out {
+
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
 @keyframes scale-out-in {
 
     0%,
@@ -245,13 +268,33 @@ a:hover {
     top: 0;
 }
 
-.horizontal-scroll-section {
+.horizontal-scroll-section,
+.horizontal-scroll-section-left,
+.horizontal-scroll-section-right {
     position: absolute;
     top: 0;
     height: 100%;
     will-change: transform;
     display: flex;
+}
+
+.horizontal-scroll-section {
     justify-content: space-between;
+}
+
+.horizontal-scroll-section-left,
+.horizontal-scroll-section-right {
+    width: 100vh;
+}
+
+.horizontal-scroll-section-left {
+    justify-content: flex-end;
+    right: 50%;
+}
+
+.horizontal-scroll-section-right {
+    justify-content: flex-start;
+    left: 50%;
 }
 
 .horizontal-scroll-contents {

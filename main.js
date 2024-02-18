@@ -23,15 +23,6 @@ function scriptLoaded() {
   }
 }
 
-function markedLoaded() {
-  fetch("https://raw.githubusercontent.com/HimDek/HimDek/main/README.md").then(function (response) {
-    response.text().then(function (text) {
-      document.getElementById("readme").innerHTML = marked.parse(text);
-      scriptLoaded()
-    });
-  });
-}
-
 function gitlistLoaded() {
   listrepos("HimDek", document.getElementById("repos-container")).then(reposcount => {
     document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span class='badge rounded-pill bg-secondary'>" + reposcount.toString() + "</span>"
@@ -44,7 +35,6 @@ function gitlistLoaded() {
   });
 }
 
-include("https://cdn.jsdelivr.net/npm/marked/marked.min.js", markedLoaded);
 include("/scripts/gitlist.js", gitlistLoaded);
 include("/scripts/themeToggle.js", scriptLoaded);
 include("/scripts/observeanimation.js", () => observeanimationLoaded = true);

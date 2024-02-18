@@ -100,22 +100,40 @@ window.addEventListener("optimizedScroll", () => {
 })
 
 window.addEventListener('scroll', (e) =>
-    document.querySelectorAll('.horizontal-scroll-sticky-wrap').forEach(el =>
+    document.querySelectorAll('.horizontal-scroll-sticky-wrap').forEach(el => {
         horizontalScrollTransform(el)
-    )
+    })
 )
 
 function horizontalScrollTransform(section) {
     offset = window.scrollY - section.parentElement.offsetTop;
 
     const horizontalScrollSection = section.querySelector('.horizontal-scroll-section')
-    horizontalScrollSectionWidth = parseInt(window.getComputedStyle(horizontalScrollSection).width.slice(0, -2))
+    const horizontalScrollSectionLeft = section.querySelector('.horizontal-scroll-section-left')
+    const horizontalScrollSectionRight = section.querySelector('.horizontal-scroll-section-right')
 
-    horizontalScrollSection.parentElement.parentElement.style.height = horizontalScrollSectionWidth + window.innerWidth + "px"
+    if (horizontalScrollSection !== null) {
+        horizontalScrollSectionWidth = parseInt(window.getComputedStyle(horizontalScrollSection).width.slice(0, -2))
 
-    offset = offset < 0 ? 0 : offset > horizontalScrollSectionWidth - window.innerWidth ? horizontalScrollSectionWidth - window.innerWidth : offset;
+        horizontalScrollSection.parentElement.parentElement.style.height = horizontalScrollSectionWidth + window.innerWidth + "px"
 
-    horizontalScrollSection.style.transform = `translate3d(${-(offset)}px, 0, 0)`
+        offset = offset < 0 ? 0 : offset > horizontalScrollSectionWidth - window.innerWidth ? horizontalScrollSectionWidth - window.innerWidth : offset;
+
+        horizontalScrollSection.style.transform = `translate3d(${-(offset)}px, 0, 0)`
+    }
+
+    if (horizontalScrollSectionLeft != null && horizontalScrollSectionRight != null) {
+        horizontalScrollSectionLeftWidth = parseInt(window.getComputedStyle(horizontalScrollSectionLeft).width.slice(0, -2))
+        horizontalScrollSectionRightWidth = parseInt(window.getComputedStyle(horizontalScrollSectionRight).width.slice(0, -2))
+
+        section.parentElement.style.height = horizontalScrollSectionLeftWidth + horizontalScrollSectionRightWidth + "px"
+
+        offsetLeft = offset < 0 ? 0 : offset > horizontalScrollSectionLeftWidth + horizontalScrollSectionRightWidth ? horizontalScrollSectionLeftWidth + horizontalScrollSectionRightWidth : offset;
+        offsetRight = offset < 0 ? 0 : offset > horizontalScrollSectionLeftWidth + horizontalScrollSectionRightWidth ? horizontalScrollSectionLeftWidth + horizontalScrollSectionRightWidth : offset;
+
+        horizontalScrollSectionLeft.style.transform = `translate3d(${-(offsetLeft)}px, 0, 0)`
+        horizontalScrollSectionRight.style.transform = `translate3d(${(offsetRight)}px, 0, 0)`
+    }
 }
 
 window.onscroll = function (ev) {
