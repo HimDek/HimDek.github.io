@@ -10325,7 +10325,7 @@ textarea.form-control-lg {
   .p-md-4 {
     padding: 1.5rem !important;
   }
-  .p-md-5, .box, .gist.card, .repo.card {
+  .p-md-5 {
     padding: 3rem !important;
   }
   .px-md-0 {
