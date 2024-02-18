@@ -13,9 +13,8 @@
 
 .box {
     @extend .container-sm;
-    @extend .p-1;
-    @extend .p-sm-2;
-    @extend .p-md-3;
+    @extend .p-sm-4;
+    @extend .p-md-5;
     @extend .rounded-5;
     @extend .border-0;
     @extend .bg-primary-subtle;
@@ -28,6 +27,8 @@
 }
 
 .card {
+    @extend .p-3;
+
     .card-body {
         @extend .p-0;
         @extend .m-2;
