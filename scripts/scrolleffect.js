@@ -99,16 +99,13 @@ window.addEventListener("optimizedScroll", () => {
     })
 })
 
-const stickySections = [...document.querySelectorAll('.horizontal-scroll-sticky-wrap')]
+window.addEventListener('scroll', (e) =>
+    document.querySelectorAll('.horizontal-scroll-sticky-wrap').forEach(el =>
+        horizontalScrollTransform(el)
+    )
+)
 
-window.addEventListener('scroll', (e) => {
-    for (let i = 0; i < stickySections.length; i++) {
-        transform(stickySections[i])
-    }
-})
-
-function transform(section) {
-
+function horizontalScrollTransform(section) {
     offset = window.scrollY - section.parentElement.offsetTop;
 
     const horizontalScrollSection = section.querySelector('.horizontal-scroll-section')

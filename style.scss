@@ -8,6 +8,11 @@
 @import "styles/classes.css";
 @import "styles/fonts.css";
 
+* {
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
 .box {
     @extend .container-sm;
     @extend .p-1;
@@ -16,6 +21,8 @@
     @extend .rounded-5;
     @extend .border-0;
     @extend .bg-primary-subtle;
+    @extend .shadow;
+    @extend .m-2;
 
     a {
         @extend .text-decoration-none;
@@ -220,8 +227,20 @@ a:hover {
     }
 }
 
-.horizontal-scroll-sticky-wrap {
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
     overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.horizontal-scroll-sticky-wrap {
+    @extend .clearfix;
     position: sticky;
     top: 0;
 }
@@ -260,9 +279,11 @@ a:hover {
 .inverted-topright-corner,
 .inverted-bottomleft-corner,
 .inverted-bottomright-corner,
-.bottomedge {
+.bottomedge,
+.leftedge,
+.rightedge {
+    position: relative;
     z-index: 1;
-    transition: 0.3s;
     margin: 0rem;
 }
 
@@ -275,17 +296,16 @@ a:hover {
 }
 
 .inverted-topleft-corner,
-.inverted-topright-corner {
-    position: relative;
+.inverted-topright-corner,
+.leftedge,
+.rightedge {
     top: 0;
 }
 
 .inverted-bottomleft-corner,
-.inverted-bottomright-corner {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 1rem;
-    margin-top: auto;
+.inverted-bottomright-corner,
+.bottomedge {
+    bottom: 0;
 }
 
 .inverted-topleft-corner {
@@ -310,20 +330,32 @@ a:hover {
 }
 
 .inverted-bottomright-corner {
-    margin-left: auto;
+    float: right;
     right: 1rem;
     -webkit-mask: var(--bottomright-mask);
     mask: var(--bottomright-mask);
+    margin-top: -2rem;
 }
 
 .bottomedge {
     height: 1rem;
     width: 100vw;
     left: 0rem;
-    bottom: 0rem;
-    margin-top: auto;
-    position: -webkit-sticky;
-    position: sticky;
+}
+
+.leftedge,
+.rightedge {
+    height: 100vh;
+    width: 1rem;
+    top: 0rem;
+}
+
+.leftedge {
+    float: left;
+}
+
+.rightedge {
+    float: right;
 }
 
 .layer {
@@ -355,7 +387,55 @@ a:hover {
     }
 }
 
+.overflow-x-clip {
+    overflow-x: clip;
+}
+
 html,
 body {
-    overflow-x: clip;
+    @extend .overflow-x-clip;
+}
+
+.bg-animated-text,
+.bg-scroll-animated-text {
+    color: rgba(225, 225, 225, .01);
+    background: linear-gradient(to right,
+            var(--bs-danger),
+            var(--bs-warning),
+            var(--bs-success),
+            var(--bs-info),
+            var(--bs-primary),
+            var(--bs-danger),
+            var(--bs-warning),
+            var(--bs-success),
+            var(--bs-info),
+            var(--bs-primary),
+            var(--bs-danger));
+    background-size: 200% auto;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.bg-animated-text {
+    animation: textShine 2s ease-in-out infinite;
+}
+
+.bg-scroll-animated-text {
+    animation: textShine;
+    animation-timeline: view();
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.sticky-bottom {
+    z-index: 1019 !important; // 1 Lower than .sticky-top
 }

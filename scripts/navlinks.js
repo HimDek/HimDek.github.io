@@ -44,12 +44,12 @@ function init() {
 }
 
 function Menu(icon) {
-	var x = document.getElementById("tabbar");
-	if (x.className === "tab") {
-		x.className += " responsive";
-	} else {
-		x.className = "tab";
-	}
+    var x = document.getElementById("nav");
+    if (x.className === "nav") {
+        x.classList.add("responsive");
+    } else {
+        x.className = "nav";
+    }
 }
 
 

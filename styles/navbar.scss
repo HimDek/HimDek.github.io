@@ -5,7 +5,6 @@
 .navbar .nav-link {
   float: left;
   margin-left: 0rem;
-  transition: 0.3s;
   padding: 0.5rem;
   width: max-content !important;
 }
@@ -40,7 +39,6 @@
   padding: 0.4rem;
   margin: 0.5rem;
   display: none;
-  transition: 0.3s;
 }
 
 .nav .nav-menu:hover {
@@ -163,5 +161,4 @@
   height: 0.4rem;
   margin: 0.15rem;
   border-radius: 0.3rem;
-  transition: 0.3s;
 }

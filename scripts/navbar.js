@@ -51,10 +51,6 @@ class ClassWatcher {
     }
 }
 
-function clicknav(id) {
-
-}
-
 document.querySelectorAll(".nav-link").forEach(el => {
     classWatcher = new ClassWatcher(el, 'active', () => activated(el), () => deactivated())
 })

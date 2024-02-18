@@ -13,9 +13,11 @@
     <div class="sticky-top">
         <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
         </nav>
-        <span class="z-1 position-relative">
+        <span>
             <div class="inverted-topleft-corner bg-accent-subtle"></div>
             <div class="inverted-topright-corner bg-accent-subtle"></div>
+            <!-- <div class="leftedge bg-accent-subtle"></div>
+            <div class="rightedge bg-accent-subtle"></div> -->
         </span>
     </div>
 
@@ -24,7 +26,8 @@
             <div class="row flex-md-row-reverse justify-content-center min-vh-100 p-0">
                 <div class="col-12 col-md-6 p-0 m-0 min-vh-100 d-flex align-items-center justify-content-center">
                     <div class="p-4">
-                        <div class="py-4 my-4 exit-right enter-right scale-exit bg-paint-1 bg-contain text-center text-md-start">
+                        <div
+                            class="py-4 my-4 exit-right enter-right scale-exit bg-paint-1 bg-contain text-center text-md-start">
                             <a class="text-decoration-none repo-link" href="">
                                 <h3 class="my-5 fw-bold text-accent-emphasis repo-h hiddenUp"></h3>
                             </a>
@@ -61,12 +64,17 @@
     </header>
 
     <div style="display:flex; flex-direction:column;">
-        <div id="content" class="min-vh-100 p-2 p-sm-3 p-md-4 p-lg-5 mx-3 rounded-5 bg-body tabcontent content">
+        <div id="content" class="min-vh-100 p-2 p-sm-3 p-md-4 p-lg-5 mx-3 rounded-5 bg-body overflow-x-clip">
             <div id="readme"></div>
         </div>
-        <div class="inverted-bottomleft-corner bg-accent-subtle"></div>
-        <div class="inverted-bottomright-corner bg-accent-subtle"></div>
-        <div class="bottomedge bg-accent-subtle"></div>
+    </div>
+
+    <div class="sticky-bottom">
+        <span>
+            <div class="inverted-bottomleft-corner bg-accent-subtle"></div>
+            <div class="inverted-bottomright-corner bg-accent-subtle"></div>
+            <div class="bottomedge bg-accent-subtle"></div>
+        </span>
     </div>
 
     <footer>
@@ -184,9 +192,10 @@
         </div>
         <div class="vh-100 d-flex align-items-center justify-content-center">
             <div class="text-center">
-                <h1 class="layer layer-0">Thank You!</h1>
+                <h1 class="layer layer-0 fw-bold bg-scroll-animated-text">Thank You!</h1>
                 <h5 class="layer layer-1">For scrolling all the way down</h5>
-                <p class="layer layer-2 fs-5">Now visit my <a href="/">Home page</a> and check some of my other projects</p>
+                <p class="layer layer-2 fs-5">Now visit my <a href="/">Home page</a> and check some of my other projects
+                </p>
             </div>
         </div>
         <div>
@@ -227,8 +236,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 
 </html>

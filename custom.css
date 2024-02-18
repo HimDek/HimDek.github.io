@@ -2,7 +2,6 @@ body {
   margin: 0px;
   min-width: 400px;
   font-size: 1rem;
-  transition: 0.3s;
 }
 
 body::-webkit-scrollbar {
@@ -16,7 +15,6 @@ button {
   margin: 0.5rem 0.2rem;
   box-shadow: none;
   border-radius: 2rem;
-  transition: 0.3s;
 }
 
 h1,
@@ -40,13 +38,11 @@ svg {
 
 img {
   max-width: -webkit-fill-available;
-  transition: 0.3s;
 }
 
 a {
   text-decoration: none;
   color: var(--bs-primary-text-emphasis);
-  transition: 0.3s;
 }
 
 a:hover,
@@ -92,7 +88,6 @@ a:hover span span svg {
 header,
 footer {
   position: relative;
-  transition: 0.3s;
   z-index: 2;
 }
 

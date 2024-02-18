@@ -128,34 +128,3 @@ button.activetab:hover {
 .img-box:hover img {
     transform: scale(1.1);
 }
-
-.bg-animated-text {
-    color: rgba(225, 225, 225, .01);
-    background: linear-gradient(to right,
-            var(--bs-danger),
-            var(--bs-warning),
-            var(--bs-success),
-            var(--bs-info),
-            var(--bs-primary),
-            var(--bs-danger),
-            var(--bs-warning),
-            var(--bs-success),
-            var(--bs-info),
-            var(--bs-primary),
-            var(--bs-danger));
-    background-size: 200% auto;
-    background-repeat: repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: textShine 2s ease-in-out infinite;
-}
-
-@keyframes textShine {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: 100% 100%;
-    }
-}
