@@ -10,14 +10,14 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
-<body id="body" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="bg-accent-subtle"
+<body id="body" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="cursor-none bg-accent-subtle"
   tabindex="0" data-bs-theme="light">
   <div id="circle" class="circle"></div>
   <div class="sticky-top">
     <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
       <div class="wobbly-button-container nav-menu-button-container">
-        <div class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
-          <div class="hamicon" id="navmenu-hamicon">
+        <div id="nav-menu" class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
+          <div id="nav-menu-hamicon" class="hamicon">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -80,21 +80,21 @@
   <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
     <div class="wobbly-button-container">
       <a href="#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="home">
+        style="--bs-bg-opacity: 0.5;" id="home" onclick="document.getElementById('nav-menu').click()">
         <span class="octicon octicon-home-24 fw-bold"></span>
         <span>Home</span>
       </a>
     </div>
     <div class="wobbly-button-container">
       <a href="#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="repos">
+        style="--bs-bg-opacity: 0.5;" id="repos" onclick="document.getElementById('nav-menu').click()">
         <span class="octicon octicon-repo-24 fw-bold"></span>
         <span>Repositories</span>
       </a>
     </div>
     <div class="wobbly-button-container">
       <a href="#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="gists">
+        style="--bs-bg-opacity: 0.5;" id="gists" onclick="document.getElementById('nav-menu').click()">
         <span class="octicon octicon-code-square-24 fw-bold"></span>
         <span>Gists</span>
       </a>
