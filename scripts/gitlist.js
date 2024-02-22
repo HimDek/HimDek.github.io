@@ -78,7 +78,7 @@ function gitpinjson(data, type, element) {
 
     cardbody = document.createElement("div")
     cardbody.classList.add("card-body")
-    cardbody.classList.add("layer-50")
+    cardbody.classList.add("layer-25")
 
     cardtitle = document.createElement("h5")
     cardtitle.classList.add("card-title")
