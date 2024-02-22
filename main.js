@@ -15,11 +15,18 @@ function include(url, callback = () => { }) {
 }
 
 loadedScriptCount = 0
+vanillaTiltLoaded = 0
 observeanimationLoaded = false
 
 function scriptLoaded() {
   if (observeanimationLoaded) {
-      observeanimation()
+    observeanimation()
+  }
+  if (vanillaTiltLoaded) {
+    VanillaTilt.init(document.querySelectorAll(".repo, .gist"), {
+      reverse: true,
+      axis: "y",
+    });
   }
 }
 
@@ -38,6 +45,7 @@ function gitlistLoaded() {
 include("/scripts/gitlist.js", gitlistLoaded);
 include("/scripts/themeToggle.js", scriptLoaded);
 include("/scripts/observeanimation.js", () => observeanimationLoaded = true);
+include("/scripts/vanilla-tilt.min.js", () => vanillaTiltLoaded = true);
 include("/scripts/scrolleffect.js");
 include("/scripts/navbar.js");
 

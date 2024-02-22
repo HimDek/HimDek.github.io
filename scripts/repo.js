@@ -391,13 +391,10 @@ function markedLoaded() {
     });
 }
 
-function navlinksLoaded() {
-    include("/scripts/themeToggle.js", scriptLoaded);
-}
-
 function templateLoaded() {
     include("https://cdn.jsdelivr.net/npm/marked/marked.min.js", markedLoaded);
-    include("/scripts/navlinks.js", navlinksLoaded);
+    include("/scripts/navbar.js", scriptLoaded);
+    include("/scripts/themeToggle.js", scriptLoaded);
     include("/scripts/observeanimation.js", () => observeanimationLoaded = true);
     include("/scripts/scrolleffect.js");
 }

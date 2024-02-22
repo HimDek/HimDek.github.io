@@ -141,3 +141,41 @@ window.onscroll = function (ev) {
         document.querySelectorAll("expand-on-bottom-hit").forEach(el => { el.classList.add("expanded") })
     }
 };
+
+const circle = document.getElementById('circle');
+
+document.addEventListener('mousemove', (e) => moveCircle(e));
+
+mousePositionX = 0
+mousePositionY = 0
+
+async function moveCircle(e) {
+  mousePositionX = e.clientX;
+  mousePositionY = e.clientY;
+
+  try {
+    let element = e.target.closest(".wobbly-button")
+    parent = e.target.closest(".wobbly-button-container")
+    parentWidth = window.getComputedStyle(parent).width
+    parentHeight = window.getComputedStyle(parent).height
+
+    nx = parent.getBoundingClientRect().left + parseInt(parentWidth.slice(0, -2)) / 2;
+    ny = parent.getBoundingClientRect().top + parseInt(parentHeight.slice(0, -2)) / 2;
+    distX = (mousePositionX - nx) / 1.5;
+    distY = (mousePositionY - ny) / 1.5;
+    element.style.transform = "translate(" + distX + "px," + distY + "px)";
+
+    circle.classList.add("big")
+  } catch {
+    let element = e.target.closest("button, a")
+    if (element === null) {
+      circle.classList.remove("big")
+    } else {
+      circle.classList.add("big")
+    }
+  }
+  const height = parseInt(window.getComputedStyle(circle).height.slice(0, -2));
+  const width = parseInt(window.getComputedStyle(circle).width.slice(0, -2));
+  circle.style.left = `${mousePositionX - width / 2}px`;
+  circle.style.top = `${mousePositionY - height / 2}px`;
+}

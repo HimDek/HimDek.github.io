@@ -46,3 +46,13 @@ fetch("/repo-footer.htm").then(function (response) {
         scriptLoaded()
     });
 });
+
+fetch("/nav.htm").then(function (response) {
+    response.text().then(function (text) {
+        nav = document.createElement("nav")
+        nav.classList.add("nav", "d-flex", "flex-column", "align-items-center", "justify-content-center", "gap-5", "bg-accent-subtle")
+        nav.innerHTML = text
+        document.body.appendChild(nav);
+    });
+});
+scriptLoaded()
