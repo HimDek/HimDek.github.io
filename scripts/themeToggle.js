@@ -28,12 +28,12 @@ navbar.appendChild(theme);
 
 function lightTheme() {
     document.getElementById("theme-icon").innerHTML = "dark_mode";
-    document.getElementById('body').setAttribute('data-bs-theme', 'light');
+    document.body.setAttribute('data-bs-theme', 'light');
 }
 
 function darkTheme() {
     document.getElementById("theme-icon").innerHTML = "light_mode";
-    document.getElementById('body').setAttribute('data-bs-theme', 'dark');
+    document.body.setAttribute('data-bs-theme', 'dark');
 }
 
 (function() {

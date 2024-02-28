@@ -72,6 +72,10 @@ function gitpinjson(data, type, element) {
 
     card = document.createElement("div")
     card.classList.add("card");
+    card.classList.add("mx-2");
+    card.classList.add("mx-md-3");
+    card.classList.add("mx-lg-4");
+    card.classList.add("mx-xl-5");
     card.setAttribute("data-tilt", "")
     card.setAttribute("data-tilt-reverse","true")
     card.setAttribute("data-tilt-full-page-listening","")
@@ -80,14 +84,16 @@ function gitpinjson(data, type, element) {
     cardbody.classList.add("card-body")
     cardbody.classList.add("layer-25")
 
-    cardtitle = document.createElement("h5")
+    cardtitle = document.createElement("h4")
     cardtitle.classList.add("card-title")
 
     cardtext = document.createElement("p")
     cardtext.classList.add("card-text")
+    cardtext.classList.add("fs-5")
 
     cardstats = document.createElement("span")
     cardstats.classList.add("card-stats")
+    cardstats.classList.add("font-monospace")
 
     titlea = document.createElement("a")
 

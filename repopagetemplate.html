@@ -2,345 +2,337 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title></title>
+  <title></title>
 
-    <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body id="body" class="bg-accent-subtle" data-bs-theme="light">
-    <div id="circle" class="circle"></div>
-    <div class="sticky-top">
-        <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
-            <div class="wobbly-button-container nav-menu-button-container">
-                <div class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
-                    <div class="hamicon" id="navmenu-hamicon">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <header>
-        <div class="container col-xxl-8 px-4 py-0">
-
-            <div class="horizontal-scroll-container d-none d-md-block">
-                <div class="horizontal-scroll-sticky-wrap min-vh-100">
-                    <div class="horizontal-scroll-section-left me-4 me-lg-5 pe-0 pe-lg-5">
-                        <div
-                            class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-end">
-                            <div class="scale-out-center p-4 text-start">
-                                <ul class="repo-stats-list list-group list-group-flush">
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="horizontal-scroll-section-right ms-4 ms-lg-5 ps-0 ps-lg-5">
-                        <div
-                            class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-start">
-                            <div class="scale-out-center p-4">
-                                <div class="p-4 my-4 scale-exit bg-paint-1 bg-contain text-center text-md-start"
-                                    style="width: min-content;">
-                                    <a class="text-decoration-none repo-link" href="">
-                                        <h3 class="my-5 fw-bold text-accent-emphasis repo-h hiddenUp"></h3>
-                                    </a>
-                                    <h5 class="my-4 fw-bold repo-s hiddenY"></h5>
-                                    <p class="mb-5 fw-bold repo-p hiddenDown"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="d-block d-md-none min-vh-100">
-                <div class="d-flex h-100 align-items-center justify-content-center">
-                    <div class="p-4 my-4 scale-in-out-center w-100 bg-paint-1 bg-contain text-center text-md-start"
-                        style="width: min-content;">
-                        <a class="text-decoration-none repo-link" href="">
-                            <h3 class="my-5 fw-bold text-accent-emphasis repo-h hiddenUp"></h3>
-                        </a>
-                        <h5 class="my-4 fw-bold repo-s hiddenY"></h5>
-                        <p class="mb-5 fw-bold repo-p hiddenDown"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="d-block d-md-none min-vh-100">
-                <div class="d-flex h-100 align-items-center justify-content-center">
-                    <div class="scale-in-out-center p-4 w-100 text-start">
-                        <ul class="repo-stats-list list-group list-group-flush">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+  <div id="circle" class="circle d-flex align-items-center justify-content-center vh-100 vw-100">
+    <div></div>
+  </div>
+  <div class="sticky-top">
+    <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
+      <div class="wobbly-button-container nav-menu-button-container">
+        <div id="nav-menu" class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
+          <div id="nav-menu-hamicon" class="hamicon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
-        <div class="row mx-3 border-top" style="height: 0px;"></div>
-        <div class="row justify-content-between align-items-center mx-3 py-4 py-md-0">
-            <div class="col-12 col-md-4 text-body-secondary text-center text-md-start font-monospace px-2 py-2 py-md-4">
-                updated <span class="repo-updated"></span>
-            </div>
-            <div class="col-12 col-md-4 text-body-secondary text-center font-monospace px-0 py-2 py-md-4">
-                pushed <span class="repo-pushed"></span>
-            </div>
-            <div class="col-12 col-md-4 text-body-secondary text-center text-md-end font-monospace px-2 py-2 py-md-4">
-                created <span class="repo-created"></span>
-            </div>
-        </div>
-    </header>
-
-    <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
-        <div class="wobbly-button-container">
-            <a href="/#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-                style="--bs-bg-opacity: 0.5;" id="home">
-                <span class="octicon octicon-home-24 fw-bold"></span>
-                <span>Home</span>
-            </a>
-        </div>
-        <div class="wobbly-button-container">
-            <a href="/#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-                style="--bs-bg-opacity: 0.5;" id="repos">
-                <span class="octicon octicon-repo-24 fw-bold"></span>
-                <span>Repositories</span>
-            </a>
-        </div>
-        <div class="wobbly-button-container">
-            <a href="/#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-                style="--bs-bg-opacity: 0.5;" id="gists">
-                <span class="octicon octicon-code-square-24 fw-bold"></span>
-                <span>Gists</span>
-            </a>
-        </div>
+      </div>
     </nav>
+  </div>
+  <header>
+    <div class="container col-xxl-8 px-4 py-0">
 
-    <section>
-        <div class="sticky-top below-nav">
-            <span>
-                <div class="inverted-topleft-corner bg-accent-subtle"></div>
-                <div class="inverted-topright-corner bg-accent-subtle"></div>
-                <div class="leftedge bg-accent-subtle"></div>
-                <div class="rightedge bg-accent-subtle"></div>
-            </span>
+      <div class="horizontal-scroll-container d-none d-md-block">
+        <div class="horizontal-scroll-sticky-wrap min-vh-100">
+          <div class="horizontal-scroll-section-left me-4 me-lg-5 pe-0 pe-lg-5">
+            <div class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-end">
+              <div class="scale-out-center p-4 text-start">
+                <ul class="repo-stats-list list-group list-group-flush">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-scroll-section-right ms-4 ms-lg-5 ps-0 ps-lg-5">
+            <div class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-start">
+              <div class="scale-out-center p-4">
+                <div class="p-4 my-4 scale-exit bg-paint-1 bg-contain text-center text-md-start"
+                  style="width: min-content;">
+                  <a class="text-decoration-none repo-link" href="">
+                    <h3 class="my-5 fw-bold text-accent-emphasis repo-h hiddenUp"></h3>
+                  </a>
+                  <h5 class="my-4 fw-bold repo-s hiddenY"></h5>
+                  <p class="mb-5 fw-bold repo-p hiddenDown"></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="content" class="mx-3 rounded-5 bg-body min-vh-100 p-2 p-sm-3 p-md-4 p-lg-5">
-            <div id="readme"></div>
-        </div>
-        <div class="sticky-bottom below-nav">
-            <span>
-                <div class="inverted-bottomleft-corner bg-accent-subtle"></div>
-                <div class="inverted-bottomright-corner bg-accent-subtle"></div>
-                <div class="bottomedge bg-accent-subtle"></div>
-            </span>
-        </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="container col-xxl-8 px-4 py-0">
-            <div class="horizontal-scroll-container d-none d-md-block">
-                <div class="horizontal-scroll-sticky-wrap min-vh-100">
-                    <div class="horizontal-scroll-section-left">
-                        <div
-                            class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-end">
-                            <div class="scale-out-center p-4">
-                                <div class="bg-paint-1 bg-contain text-center w-100">
-                                    <a class="text-decoration-none text-body" href="https://himdek.com" target="_blank">
-                                        <div class="shrunk img-box shadow-box my-4 mx-2 overflow-hidden rounded-circle d-inline-flex"
-                                            style="height: 224px; width: 224px;">
-                                            <img class="w-100 h-100 object-fit-cover"
-                                                src="https://avatars.githubusercontent.com/u/61367380">
-                                        </div>
-                                        <h1 class="shrunk my-3 mx-5 px-4 fw-bold">HimDek</h1>
-                                    </a>
-                                    <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
-                                        <a class="text-decoration-none text-body wobbly-button-container"
-                                            href="https://github.com/HimDek" target="_blank">
-                                            <div class="p-2 wobbly-button">
-                                                <i class="bi bi-github fs-3"></i>
-                                            </div>
-                                        </a>
-                                        <a class="text-decoration-none text-body wobbly-button-container"
-                                            href="https://www.linkedin.com/in/himprakash-deka-593806205"
-                                            target="_blank">
-                                            <div class="p-2 wobbly-button">
-                                                <i class="bi bi-linkedin fs-3"></i>
-                                            </div>
-                                        </a>
-                                        <a class="text-decoration-none text-body wobbly-button-container"
-                                            href="https://www.facebook.com/profile.php?id=100071066930198"
-                                            target="_blank">
-                                            <div class="p-2 wobbly-button">
-                                                <i class="bi bi-facebook fs-3"></i>
-                                            </div>
-                                        </a>
-                                        <a class="text-decoration-none text-body wobbly-button-container"
-                                            href="https://www.instagram.com/him.pro_d/" target="_blank">
-                                            <div class="p-2 wobbly-button">
-                                                <i class="bi bi-instagram fs-3"></i>
-                                            </div>
-                                        </a>
-                                        <a class="text-decoration-none text-body wobbly-button-container"
-                                            target="_blank" href="mailto:info@himdek.com">
-                                            <div class="p-2 wobbly-button">
-                                                <i class="bi bi-envelope-fill fs-3"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="horizontal-scroll-section-right ms-4 ms-lg-5 ps-0 ps-lg-5">
-                        <div
-                            class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-start">
-                            <div class="py-4 my-4 scale-out-center bg-paint-1 bg-contain text-start"
-                                style="width: min-content;">
-                                <div class="hiddenY">
-                                    <a class="text-decoration-none repo-link" href="">
-                                        <h2 class="repo-name my-5 font-monospace fw-bold text-accent-emphasis">repo
-                                            name
-                                            placeholder</h2>
-                                    </a>
-                                    <h5 class="my-4 fw-bold">is developed by</h5>
-                                </div>
-                                <div class="wrapper">
-                                    <h2 class="mb-5 fw-bold text-accent-emphasis typing typing-demo">Himprakash
-                                        Deka,</h2>
-                                </div>
-                                <p class="hiddenY">
-                                    a young programmer from Guwahati, India.
-                                    I am pursuing my B.Tech in CSE from Assam University, Silchar.
-                                    I make themes and widgets for KDE Plasma and a lot of other cool stuffs... <a
-                                        class="text-decoration-none" href="/">more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="d-block d-md-none min-vh-100">
-                <div class="d-flex h-100 align-items-center justify-content-center">
-                    <div class="bg-paint-1 scale-in-out-center bg-contain text-start w-100">
-                        <div class="hiddenY">
-                            <a class="text-decoration-none repo-link" href="">
-                                <h2 class="repo-name my-5 font-monospace fw-bold text-accent-emphasis">repo name
-                                    placeholder</h2>
-                            </a>
-                            <h5 class="my-4 fw-bold">is developed by</h5>
-                        </div>
-                        <div class="wrapper">
-                            <h2 class="mb-5 fw-bold text-accent-emphasis typing typing-demo">Himprakash Deka,</h2>
-                        </div>
-                        <p class="hiddenY">
-                            a young programmer from Guwahati, India.
-                            I am pursuing my B.Tech in CSE from Assam University, Silchar.
-                            I make themes and widgets for KDE Plasma and a lot of other cool stuffs... <a
-                                class="text-decoration-none" href="/">more</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="d-block d-md-none min-vh-100">
-                <div class="d-flex h-100 align-items-center justify-content-center">
-                    <div class="scale-in-out-center p-4 text-start w-100">
-                        <div class="my-4 py-4 bg-paint-1 bg-contain text-center">
-                            <a class="text-decoration-none text-body" href="https://himdek.com" target="_blank">
-                                <div class="shrunk img-box shadow-box my-4 mx-2 overflow-hidden rounded-circle d-inline-flex"
-                                    style="height: 256px; width: 256px;">
-                                    <img class="w-100 h-100 object-fit-cover"
-                                        src="https://avatars.githubusercontent.com/u/61367380">
-                                </div>
-                                <h1 class="shrunk m-3 fw-bold">HimDek</h1>
-                            </a>
-                            <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
-                                <a class="text-decoration-none text-body wobbly-button-container"
-                                    href="https://github.com/HimDek" target="_blank">
-                                    <div class="p-2 wobbly-button">
-                                        <i class="bi bi-github fs-3"></i>
-                                    </div>
-                                </a>
-                                <a class="text-decoration-none text-body wobbly-button-container"
-                                    href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
-                                    <div class="p-2 wobbly-button">
-                                        <i class="bi bi-linkedin fs-3"></i>
-                                    </div>
-                                </a>
-                                <a class="text-decoration-none text-body wobbly-button-container"
-                                    href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
-                                    <div class="p-2 wobbly-button">
-                                        <i class="bi bi-facebook fs-3"></i>
-                                    </div>
-                                </a>
-                                <a class="text-decoration-none text-body wobbly-button-container"
-                                    href="https://www.instagram.com/him.pro_d/" target="_blank">
-                                    <div class="p-2 wobbly-button">
-                                        <i class="bi bi-instagram fs-3"></i>
-                                    </div>
-                                </a>
-                                <a class="text-decoration-none text-body wobbly-button-container" target="_blank"
-                                    href="mailto:info@himdek.com">
-                                    <div class="p-2 wobbly-button">
-                                        <i class="bi bi-envelope-fill fs-3"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="d-block d-md-none min-vh-100">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="p-4 my-4 scale-in-out-center w-100 bg-paint-1 bg-contain text-center text-md-start"
+            style="width: min-content;">
+            <a class="text-decoration-none repo-link" href="">
+              <h3 class="my-5 fw-bold text-accent-emphasis repo-h hiddenUp"></h3>
+            </a>
+            <h5 class="my-4 fw-bold repo-s hiddenY"></h5>
+            <p class="mb-5 fw-bold repo-p hiddenDown"></p>
+          </div>
         </div>
-        <div class="vh-100 d-flex align-items-center justify-content-center">
-            <div class="text-center">
-                <div class="layer layer-0 ">
-                    <h1 class="fw-bold bg-scroll-animated-text">Thank You!</h1>
+      </div>
+      <div class="d-block d-md-none min-vh-100">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="scale-in-out-center p-4 w-100 text-start">
+            <ul class="repo-stats-list list-group list-group-flush">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row mx-3 border-top" style="height: 0px;"></div>
+    <div class="row justify-content-between align-items-center mx-3 py-4 py-md-0">
+      <div class="col-12 col-md-4 text-body-secondary text-center text-md-start font-monospace px-2 py-2 py-md-4">
+        updated <span class="repo-updated"></span>
+      </div>
+      <div class="col-12 col-md-4 text-body-secondary text-center font-monospace px-0 py-2 py-md-4">
+        pushed <span class="repo-pushed"></span>
+      </div>
+      <div class="col-12 col-md-4 text-body-secondary text-center text-md-end font-monospace px-2 py-2 py-md-4">
+        created <span class="repo-created"></span>
+      </div>
+    </div>
+  </header>
+
+  <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
+    <div class="wobbly-button-container">
+      <a href="/#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+        style="--bs-bg-opacity: 0.5;" id="home">
+        <span class="octicon octicon-home-24 fw-bold"></span>
+        <span>Home</span>
+      </a>
+    </div>
+    <div class="wobbly-button-container">
+      <a href="/#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+        style="--bs-bg-opacity: 0.5;" id="repos">
+        <span class="octicon octicon-repo-24 fw-bold"></span>
+        <span>Repositories</span>
+      </a>
+    </div>
+    <div class="wobbly-button-container">
+      <a href="/#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+        style="--bs-bg-opacity: 0.5;" id="gists">
+        <span class="octicon octicon-code-square-24 fw-bold"></span>
+        <span>Gists</span>
+      </a>
+    </div>
+  </nav>
+
+  <section>
+    <div class="sticky-top below-nav">
+      <span>
+        <div class="inverted-topleft-corner bg-accent-subtle"></div>
+        <div class="inverted-topright-corner bg-accent-subtle"></div>
+        <div class="leftedge bg-accent-subtle"></div>
+        <div class="rightedge bg-accent-subtle"></div>
+      </span>
+    </div>
+    <div id="content" class="mx-3 rounded-5 bg-body min-vh-100 p-2 p-sm-3 p-md-4 p-lg-5">
+      <div id="readme"></div>
+    </div>
+    <div class="sticky-bottom below-nav">
+      <span>
+        <div class="inverted-bottomleft-corner bg-accent-subtle"></div>
+        <div class="inverted-bottomright-corner bg-accent-subtle"></div>
+        <div class="bottomedge bg-accent-subtle"></div>
+      </span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container col-xxl-8 px-4 py-0">
+      <div class="horizontal-scroll-container d-none d-md-block">
+        <div class="horizontal-scroll-sticky-wrap min-vh-100">
+          <div class="horizontal-scroll-section-left">
+            <div class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-end">
+              <div class="scale-out-center p-4">
+                <div class="bg-paint-1 bg-contain text-center w-100">
+                  <a class="text-decoration-none text-body" href="https://himdek.com" target="_blank">
+                    <div class="shrunk img-box shadow-box my-4 mx-2 overflow-hidden rounded-circle d-inline-flex"
+                      style="height: 224px; width: 224px;">
+                      <img class="w-100 h-100 object-fit-cover" src="https://avatars.githubusercontent.com/u/61367380">
+                    </div>
+                    <h1 class="shrunk my-3 mx-5 px-4 fw-bold">HimDek</h1>
+                  </a>
+                  <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
+                    <a class="text-decoration-none text-body wobbly-button-container" href="https://github.com/HimDek"
+                      target="_blank">
+                      <div class="p-2 wobbly-button">
+                        <i class="bi bi-github fs-3"></i>
+                      </div>
+                    </a>
+                    <a class="text-decoration-none text-body wobbly-button-container"
+                      href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
+                      <div class="p-2 wobbly-button">
+                        <i class="bi bi-linkedin fs-3"></i>
+                      </div>
+                    </a>
+                    <a class="text-decoration-none text-body wobbly-button-container"
+                      href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
+                      <div class="p-2 wobbly-button">
+                        <i class="bi bi-facebook fs-3"></i>
+                      </div>
+                    </a>
+                    <a class="text-decoration-none text-body wobbly-button-container"
+                      href="https://www.instagram.com/him.pro_d/" target="_blank">
+                      <div class="p-2 wobbly-button">
+                        <i class="bi bi-instagram fs-3"></i>
+                      </div>
+                    </a>
+                    <a class="text-decoration-none text-body wobbly-button-container" target="_blank"
+                      href="mailto:info@himdek.com">
+                      <div class="p-2 wobbly-button">
+                        <i class="bi bi-envelope-fill fs-3"></i>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <h5 class="layer layer-1">For scrolling all the way down</h5>
-                <p class="layer layer-2 fs-5">Now visit my <a href="/">Home page</a> and check some of my other projects
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-scroll-section-right ms-4 ms-lg-5 ps-0 ps-lg-5">
+            <div class="horizontal-scroll-contents min-vw-100 h-100 d-flex align-items-center justify-content-start">
+              <div class="py-4 my-4 scale-out-center bg-paint-1 bg-contain text-start" style="width: min-content;">
+                <div class="hiddenY">
+                  <a class="text-decoration-none repo-link" href="">
+                    <h2 class="repo-name my-5 font-monospace fw-bold text-accent-emphasis">repo
+                      name
+                      placeholder</h2>
+                  </a>
+                  <h5 class="my-4 fw-bold">is developed by</h5>
+                </div>
+                <div class="wrapper">
+                  <h2 class="mb-5 fw-bold text-accent-emphasis typing typing-demo">Himprakash
+                    Deka,</h2>
+                </div>
+                <p class="hiddenY">
+                  a young programmer from Guwahati, India.
+                  I am pursuing my B.Tech in CSE from Assam University, Silchar.
+                  I make themes and widgets for KDE Plasma and a lot of other cool stuffs... <a
+                    class="text-decoration-none" href="/">more</a>
                 </p>
+              </div>
             </div>
+          </div>
         </div>
-        <div>
-            <div class="row row-cols-2 justify-content-between align-items-center mx-3">
-                <div class="col text-nowrap d-inline text-start p-2">
-                    <a class="text-decoration-none text-body" href="https://choosealicense.com/licenses/mit">
-                        <svg aria-hidden="true" height="19" viewBox="0 0 16 16" version="1.1" width="19"
-                            data-view-component="true" class="octicon octicon-law mr-1">
-                            <path fill-rule="evenodd"
-                                d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z">
-                            </path>
-                        </svg>
-                        <span class="font-monospace">MIT License</span>
-                    </a>
-                </div>
-                <div class="col text-nowrap d-inline text-end p-2">
-                    <a class="text-decoration-none text-body" href='https://github.com/HimDek/HimDek.github.io'
-                        target="_blank">
-                        <svg class="p-0" height="19" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="19"
-                            data-view-component="true" class="octicon octicon-mark-github v-align-middle">
-                            <path
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-                            </path>
-                        </svg>
-                        <span class="font-monospace">View Sourcecode</span>
-                    </a>
-                </div>
+      </div>
+
+      <div class="d-block d-md-none min-vh-100">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="bg-paint-1 scale-in-out-center bg-contain text-start w-100">
+            <div class="hiddenY">
+              <a class="text-decoration-none repo-link" href="">
+                <h2 class="repo-name my-5 font-monospace fw-bold text-accent-emphasis">repo name
+                  placeholder</h2>
+              </a>
+              <h5 class="my-4 fw-bold">is developed by</h5>
             </div>
-            <div class="row mx-3 border-top" style="height: 0px;"></div>
-            <div class="row justify-content-between align-items-center mx-3">
-                <div class="col-8 text-body-secondary text-start font-monospace p-2">©
-                    2023
-                    Himprakash Deka
-                </div>
-                <div class="col-4 text-body-secondary text-end font-monospace p-2">
-                    <a class="text-decoration-none" href="/">himdek.com</a>
-                </div>
+            <div class="wrapper">
+              <h2 class="mb-5 fw-bold text-accent-emphasis typing typing-demo">Himprakash Deka,</h2>
             </div>
+            <p class="hiddenY">
+              a young programmer from Guwahati, India.
+              I am pursuing my B.Tech in CSE from Assam University, Silchar.
+              I make themes and widgets for KDE Plasma and a lot of other cool stuffs... <a class="text-decoration-none"
+                href="/">more</a>
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
+      <div class="d-block d-md-none min-vh-100">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="scale-in-out-center p-4 text-start w-100">
+            <div class="my-4 py-4 bg-paint-1 bg-contain text-center">
+              <a class="text-decoration-none text-body" href="https://himdek.com" target="_blank">
+                <div class="shrunk img-box shadow-box my-4 mx-2 overflow-hidden rounded-circle d-inline-flex"
+                  style="height: 256px; width: 256px;">
+                  <img class="w-100 h-100 object-fit-cover" src="https://avatars.githubusercontent.com/u/61367380">
+                </div>
+                <h1 class="shrunk m-3 fw-bold">HimDek</h1>
+              </a>
+              <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
+                <a class="text-decoration-none text-body wobbly-button-container" href="https://github.com/HimDek"
+                  target="_blank">
+                  <div class="p-2 wobbly-button">
+                    <i class="bi bi-github fs-3"></i>
+                  </div>
+                </a>
+                <a class="text-decoration-none text-body wobbly-button-container"
+                  href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
+                  <div class="p-2 wobbly-button">
+                    <i class="bi bi-linkedin fs-3"></i>
+                  </div>
+                </a>
+                <a class="text-decoration-none text-body wobbly-button-container"
+                  href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
+                  <div class="p-2 wobbly-button">
+                    <i class="bi bi-facebook fs-3"></i>
+                  </div>
+                </a>
+                <a class="text-decoration-none text-body wobbly-button-container"
+                  href="https://www.instagram.com/him.pro_d/" target="_blank">
+                  <div class="p-2 wobbly-button">
+                    <i class="bi bi-instagram fs-3"></i>
+                  </div>
+                </a>
+                <a class="text-decoration-none text-body wobbly-button-container" target="_blank"
+                  href="mailto:info@himdek.com">
+                  <div class="p-2 wobbly-button">
+                    <i class="bi bi-envelope-fill fs-3"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vh-100 d-flex align-items-center justify-content-center">
+      <div class="text-center">
+        <div class="layer layer-0 ">
+          <h1 class="fw-bold bg-scroll-animated-text">Thank You!</h1>
+        </div>
+        <h5 class="layer layer-1">For scrolling all the way down</h5>
+        <p class="layer layer-2 fs-5">Now visit my <a href="/">Home page</a> and check some of my other projects
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="row row-cols-2 justify-content-between align-items-center mx-3">
+        <div class="col text-nowrap d-inline text-start p-2">
+          <a class="text-decoration-none text-body" href="https://choosealicense.com/licenses/mit">
+            <svg aria-hidden="true" height="19" viewBox="0 0 16 16" version="1.1" width="19" data-view-component="true"
+              class="octicon octicon-law mr-1">
+              <path fill-rule="evenodd"
+                d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z">
+              </path>
+            </svg>
+            <span class="font-monospace">MIT License</span>
+          </a>
+        </div>
+        <div class="col text-nowrap d-inline text-end p-2">
+          <a class="text-decoration-none text-body" href='https://github.com/HimDek/HimDek.github.io' target="_blank">
+            <svg class="p-0" height="19" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="19"
+              data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+              </path>
+            </svg>
+            <span class="font-monospace">View Sourcecode</span>
+          </a>
+        </div>
+      </div>
+      <div class="row mx-3 border-top" style="height: 0px;"></div>
+      <div class="row justify-content-between align-items-center mx-3">
+        <div class="col-8 text-body-secondary text-start font-monospace p-2">©
+          2023
+          Himprakash Deka
+        </div>
+        <div class="col-4 text-body-secondary text-end font-monospace p-2">
+          <a class="text-decoration-none" href="/">himdek.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

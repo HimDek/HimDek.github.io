@@ -10,9 +10,11 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
-<body id="body" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="cursor-none bg-accent-subtle"
-  tabindex="0" data-bs-theme="light">
-  <div id="circle" class="circle"></div>
+<body id="hometab" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true"
+  class="cursor-none bg-accent-subtle" tabindex="0" data-bs-theme="light">
+  <div id="circle" class="circle d-flex align-items-center justify-content-center vh-100 vw-100">
+    <div></div>
+  </div>
   <div class="sticky-top">
     <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
       <div class="wobbly-button-container nav-menu-button-container">
@@ -29,8 +31,7 @@
   <header>
     <div class="container col-xxl-8 px-4 py-0 d-flex flex-column align-items-center justify-content-center">
       <div class="min-vh-100 d-flex align-items-center justify-content-center min-vw-100">
-        <div>
-
+        <div class="bg-paint-1 bg-contain">
           <div class="slide-out-right">
             <h1 class="display-1 m-0">Welcome</h1>
           </div>
@@ -38,37 +39,39 @@
             <h6 class="display-6 text-center m-0">To The</h6>
           </div>
           <div class="slide-out-left">
-            <div style="transform: translateY(-3vh);">
+            <div style="transform: translateY(-2vh);">
               <h1 class="text-end display-1 m-0">Portfolio</h1>
             </div>
             <div class="slide-out-right">
               <div style="transform: translateY(-4vh);">
-                <h6 class="slide-out-right display-6 m-0 ms-5 ps-5">of</h6>
+                <h6 class="slide-out-right display-6 m-0">of</h6>
               </div>
             </div>
             <div style="transform: translateY(-2vh);">
-              <h1 class="slide-out-left display-1 m-0 ms-5 ps-5">Himprakash Deka</h1>
+              <h1 class="display-1 m-0 ms-5">Himprakash Deka</h1>
             </div>
           </div>
         </div>
       </div>
       <div class="p-4">
-        <div class="bg-paint-1 bg-contain text-center" style="width: min-content;" data-tilt data-tilt-reverse="true">
+        <div class="bg-paint-1 bg-contain" data-tilt data-tilt-reverse="true" data-tilt-full-page-listening>
           <div class="layer-50">
-            <div class="d-flex align-items-center justify-content-center">
-              <div class="shrunk img-box shadow-box my-4 mx-2 overflow-clip rounded-circle d-inline-flex"
-                style="height: 256px; width: 256px;">
-                <img class="w-100 h-100 object-fit-cover" src="https://avatars.githubusercontent.com/u/61367380">
+            <div class="row align-items-center justify-content-center" style="min-height: 384px;">
+              <div class="col-12 col-sm-6" style="width: 256px;">
+                <div
+                  class="ratio ratio-1x1 shrunk img-box shadow-box m-0 p-0 overflow-clip rounded-circle d-inline-flex">
+                  <img class="w-100 h-100 object-fit-cover" src="https://avatars.githubusercontent.com/u/61367380">
+                </div>
               </div>
-              <div>
-                <pre class="hiddenY fs-6">
-  I am a programmer from India.
-  I am pursuing my B.Tech in CSE
-  from Assam University. I make
-  themes and widgets for KDE
-  Plasma and a lot of other cool
-  stuffs.
-                </pre>
+              <div class="col-12 col-sm-6 text-center text-sm-start" style="max-width: 400px;">
+                <p class="hiddenY fs-6">
+                  I am a programmer from India.
+                  I am pursuing my B.Tech in CSE
+                  from Assam University. I make
+                  themes and widgets for KDE
+                  Plasma and a lot of other cool
+                  stuffs.
+                </p>
               </div>
             </div>
           </div>
@@ -101,7 +104,7 @@
     </div>
   </nav>
 
-  <section id="hometab">
+  <section>
     <div class="horizontal-scroll-container">
       <div class="horizontal-scroll-sticky-wrap min-vh-100">
         <div class="horizontal-scroll-section">
@@ -270,32 +273,33 @@
 
   <footer>
     <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
-      <a class="text-decoration-none text-body wobbly-button-container" href="https://github.com/HimDek"
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://github.com/HimDek"
         target="_blank">
-        <div class="p-2 wobbly-button">
+        <div class="px-2 wobbly-button">
           <i class="bi bi-github fs-3"></i>
         </div>
       </a>
-      <a class="text-decoration-none text-body wobbly-button-container"
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
         href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
-        <div class="p-2 wobbly-button">
+        <div class="px-2 wobbly-button">
           <i class="bi bi-linkedin fs-3"></i>
         </div>
       </a>
-      <a class="text-decoration-none text-body wobbly-button-container"
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
         href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
-        <div class="p-2 wobbly-button">
+        <div class="px-2 wobbly-button">
           <i class="bi bi-facebook fs-3"></i>
         </div>
       </a>
-      <a class="text-decoration-none text-body wobbly-button-container" href="https://www.instagram.com/him.pro_d/"
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://www.instagram.com/him.pro_d/"
         target="_blank">
-        <div class="p-2 wobbly-button">
+        <div class="px-2 wobbly-button">
           <i class="bi bi-instagram fs-3"></i>
         </div>
       </a>
-      <a class="text-decoration-none text-body wobbly-button-container" target="_blank" href="mailto:info@himdek.com">
-        <div class="p-2 wobbly-button">
+      <a class="text-decoration-none text-body wobbly-button-container p-2" target="_blank"
+        href="mailto:info@himdek.com">
+        <div class="px-2 wobbly-button">
           <i class="bi bi-envelope-fill fs-3"></i>
         </div>
       </a>

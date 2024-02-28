@@ -120,11 +120,3 @@ button.activetab:hover {
 .bg-paint-3 {
     background-image: url('/assets/backgrounds/paint3.png');
 }
-
-.img-box img {
-    transition: transform .5s ease;
-}
-
-.img-box:hover img {
-    transform: scale(1.1);
-}

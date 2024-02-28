@@ -143,39 +143,62 @@ window.onscroll = function (ev) {
 };
 
 const circle = document.getElementById('circle');
+const pointer = circle.querySelector("div")
 
 document.addEventListener('mousemove', (e) => moveCircle(e));
+
+document.querySelectorAll(".wobbly-button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        setTimeout(() => {
+            el.style.transition = "transform 0s"
+        }, 200)
+    })
+    el.addEventListener("mouseleave", () => {
+        el.style.transition = "transform 0.2s"
+    })
+})
+
 
 mousePositionX = 0
 mousePositionY = 0
 
 async function moveCircle(e) {
-  mousePositionX = e.clientX;
-  mousePositionY = e.clientY;
+    mousePositionX = e.clientX;
+    mousePositionY = e.clientY;
 
-  try {
-    let element = e.target.closest(".wobbly-button")
-    parent = e.target.closest(".wobbly-button-container")
-    parentWidth = window.getComputedStyle(parent).width
-    parentHeight = window.getComputedStyle(parent).height
+    try {
+        let element = e.target.closest(".wobbly-button")
+        parent = e.target.closest(".wobbly-button-container")
+        parentWidth = window.getComputedStyle(parent).width
+        parentHeight = window.getComputedStyle(parent).height
 
-    nx = parent.getBoundingClientRect().left + parseInt(parentWidth.slice(0, -2)) / 2;
-    ny = parent.getBoundingClientRect().top + parseInt(parentHeight.slice(0, -2)) / 2;
-    distX = (mousePositionX - nx) / 1.5;
-    distY = (mousePositionY - ny) / 1.5;
-    element.style.transform = "translate(" + distX + "px," + distY + "px)";
+        nx = parent.getBoundingClientRect().left + parseInt(parentWidth.slice(0, -2)) / 2;
+        ny = parent.getBoundingClientRect().top + parseInt(parentHeight.slice(0, -2)) / 2;
+        distX = (mousePositionX - nx) / 1.5;
+        distY = (mousePositionY - ny) / 1.5;
+        element.style.transform = "translate(" + distX + "px," + distY + "px)";
 
-    circle.classList.add("big")
-  } catch {
-    let element = e.target.closest("button, a")
-    if (element === null) {
-      circle.classList.remove("big")
-    } else {
-      circle.classList.add("big")
+        //circle.classList.add("big")
+        pointer.style.borderRadius = `${parseInt(parentWidth.slice(0, -2)) < parseInt(parentHeight.slice(0, -2)) ? parseInt(parentWidth.slice(0, -2)) / 2 : parseInt(parentHeight.slice(0, -2)) / 2}px`
+        pointer.style.width = `${parseInt(parentWidth.slice(0, -2))}px`
+        pointer.style.height = `${parseInt(parentHeight.slice(0, -2))}px`
+        pointer.classList.add("big")
+    } catch {
+        let element = e.target.closest("button, a")
+        if (element === null) {
+            pointer.style.borderRadius = `50%`
+            pointer.style.width = `16px`
+            pointer.style.height = `16px`
+            pointer.classList.remove("big")
+        } else {
+            pointer.style.borderRadius = `25px`
+            pointer.style.width = `50px`
+            pointer.style.height = `50px`
+            pointer.classList.add("big")
+        }
     }
-  }
-  const height = parseInt(window.getComputedStyle(circle).height.slice(0, -2));
-  const width = parseInt(window.getComputedStyle(circle).width.slice(0, -2));
-  circle.style.left = `${mousePositionX - width / 2}px`;
-  circle.style.top = `${mousePositionY - height / 2}px`;
+    const height = parseInt(window.getComputedStyle(circle).height.slice(0, -2));
+    const width = parseInt(window.getComputedStyle(circle).width.slice(0, -2));
+    circle.style.left = `${mousePositionX - width / 2}px`;
+    circle.style.top = `${mousePositionY - height / 2}px`;
 }
