@@ -106,7 +106,7 @@ window.addEventListener('scroll', (e) =>
 )
 
 function horizontalScrollTransform(section) {
-    offset = window.scrollY - section.parentElement.offsetTop;
+    offset = -section.parentElement.getBoundingClientRect().top;
 
     const horizontalScrollSection = section.querySelector('.horizontal-scroll-section')
     const horizontalScrollSectionLeft = section.querySelector('.horizontal-scroll-section-left')

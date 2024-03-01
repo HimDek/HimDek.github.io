@@ -1,6 +1,6 @@
 function observeanimation() {
     document.getElementById('theme-icon').classList.add('shrunk');
-    document.querySelectorAll('.anb, .badge').forEach(element => element.classList.add('shrunk'));
+    document.querySelectorAll('.anb, .nav-link .badge').forEach(element => element.classList.add('shrunk'));
     document.querySelectorAll('.tabmenu').forEach(element => element.classList.add('hiddenLeft'));
 
     document.querySelectorAll('.typing').forEach(el => typingobserver.observe(el));

@@ -341,8 +341,6 @@ a {
 .horizontal-scroll-section-left,
 .horizontal-scroll-section-right {
     position: absolute;
-    top: 0;
-    height: 100%;
     will-change: transform;
     display: flex;
 }
@@ -621,5 +619,24 @@ header, footer {
 
     &:not(:hover) {
         transform: translate(0, 0) !important;
+    }
+}
+
+.scroll-banner-left {
+    animation: scroll-banner linear;
+    animation-timeline: view();
+}
+
+.scroll-banner-right {
+    animation: scroll-banner linear reverse;
+    animation-timeline: view();
+}
+
+@keyframes scroll-banner {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-300vh);
     }
 }
