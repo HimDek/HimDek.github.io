@@ -390,6 +390,7 @@ a {
 .inverted-bottomleft-corner,
 .inverted-bottomright-corner,
 .bottomedge,
+.topedge,
 .leftedge,
 .rightedge {
     position: relative;
@@ -406,6 +407,7 @@ a {
 
 .inverted-topleft-corner,
 .inverted-topright-corner,
+.topedge,
 .leftedge,
 .rightedge {
     top: 0;
@@ -446,6 +448,12 @@ a {
     margin-top: -2rem;
 }
 
+.topedge {
+    height: 3.6rem;
+    width: 100%;
+    left: 0rem;
+}
+
 .bottomedge {
     height: 1rem;
     width: 100%;
@@ -460,7 +468,6 @@ a {
 }
 
 .below-nav {
-    top: 3.59rem;
     z-index: 1000;
 }
 

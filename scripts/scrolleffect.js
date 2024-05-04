@@ -151,10 +151,12 @@ document.querySelectorAll(".wobbly-button").forEach(el => {
     el.addEventListener("mouseenter", () => {
         setTimeout(() => {
             el.style.transition = "transform 0s"
+            el.style.zIndex = "10000"
         }, 200)
     })
     el.addEventListener("mouseleave", () => {
         el.style.transition = "transform 0.2s"
+        el.style.zIndex = ""
     })
 })
 

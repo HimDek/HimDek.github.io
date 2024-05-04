@@ -15,7 +15,7 @@
     <div></div>
   </div>
   <div class="sticky-top">
-    <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
+    <nav id="navbar" class="navbar align-items-start justify-content-between px-3 py-0">
       <div class="wobbly-button-container nav-menu-button-container">
         <div id="nav-menu" class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
           <div id="nav-menu-hamicon" class="hamicon">
@@ -94,25 +94,59 @@
   </header>
 
   <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
-    <div class="wobbly-button-container">
-      <a href="/#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="home">
-        <span class="octicon octicon-home-24 fw-bold"></span>
-        <span>Home</span>
-      </a>
+    <div class="d-flex flex-column align-items-center justify-content-around gap-5">
+      <div class="wobbly-button-container">
+        <a href="/#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="home">
+          <span class="octicon octicon-home-24 fw-bold"></span>
+          <span>Home</span>
+        </a>
+      </div>
+      <div class="wobbly-button-container">
+        <a href="/#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="repos">
+          <span class="octicon octicon-repo-24 fw-bold"></span>
+          <span>Repositories</span>
+        </a>
+      </div>
+      <div class="wobbly-button-container">
+        <a href="/#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="gists">
+          <span class="octicon octicon-code-square-24 fw-bold"></span>
+          <span>Gists</span>
+        </a>
+      </div>
     </div>
-    <div class="wobbly-button-container">
-      <a href="/#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="repos">
-        <span class="octicon octicon-repo-24 fw-bold"></span>
-        <span>Repositories</span>
+    <div class="m-4 d-flex align-items-center justify-content-center position-absolute bottom-0 gap-1">
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://github.com/HimDek"
+        target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-github fs-3"></i>
+        </div>
       </a>
-    </div>
-    <div class="wobbly-button-container">
-      <a href="/#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="gists">
-        <span class="octicon octicon-code-square-24 fw-bold"></span>
-        <span>Gists</span>
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
+        href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-linkedin fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
+        href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-facebook fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://www.instagram.com/him.pro_d/"
+        target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-instagram fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" target="_blank"
+        href="mailto:info@himdek.com">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-envelope-fill fs-3"></i>
+        </div>
       </a>
     </div>
   </nav>

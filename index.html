@@ -16,7 +16,7 @@
     <div></div>
   </div>
   <div class="sticky-top">
-    <nav id="navbar" class="navbar bg-accent-subtle align-items-start justify-content-between px-3 py-0">
+    <nav id="navbar" class="navbar align-items-start justify-content-between px-3 py-0">
       <div class="wobbly-button-container nav-menu-button-container">
         <div id="nav-menu" class="wobbly-button nav-menu rounded-circle border border-0" onclick="Menu()">
           <div id="nav-menu-hamicon" class="hamicon">
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <div class="col-12 col-sm-6 text-center text-sm-start" style="max-width: 400px;">
-                <p class="hiddenY fs-6">
+                <p class="hiddenY font-monospace fs-6">
                   I am a programmer from India.
                   I am pursuing my B.Tech in CSE
                   from Assam University. I make
@@ -81,25 +81,59 @@
   </header>
 
   <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
-    <div class="wobbly-button-container">
-      <a href="#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="home" onclick="document.getElementById('nav-menu').click()">
-        <span class="octicon octicon-home-24 fw-bold"></span>
-        <span>Home</span>
-      </a>
+    <div class="d-flex flex-column align-items-center justify-content-around gap-5">
+      <div class="wobbly-button-container">
+        <a href="#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="home" onclick="document.getElementById('nav-menu').click()">
+          <span class="octicon octicon-home-24 fw-bold"></span>
+          <span>Home</span>
+        </a>
+      </div>
+      <div class="wobbly-button-container">
+        <a href="#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="repos" onclick="document.getElementById('nav-menu').click()">
+          <span class="octicon octicon-repo-24 fw-bold"></span>
+          <span>Repositories</span>
+        </a>
+      </div>
+      <div class="wobbly-button-container">
+        <a href="#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="gists" onclick="document.getElementById('nav-menu').click()">
+          <span class="octicon octicon-code-square-24 fw-bold"></span>
+          <span>Gists</span>
+        </a>
+      </div>
     </div>
-    <div class="wobbly-button-container">
-      <a href="#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="repos" onclick="document.getElementById('nav-menu').click()">
-        <span class="octicon octicon-repo-24 fw-bold"></span>
-        <span>Repositories</span>
+    <div class="m-4 d-flex align-items-center justify-content-center position-absolute bottom-0 gap-1">
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://github.com/HimDek"
+        target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-github fs-3"></i>
+        </div>
       </a>
-    </div>
-    <div class="wobbly-button-container">
-      <a href="#giststab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
-        style="--bs-bg-opacity: 0.5;" id="gists" onclick="document.getElementById('nav-menu').click()">
-        <span class="octicon octicon-code-square-24 fw-bold"></span>
-        <span>Gists</span>
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
+        href="https://www.linkedin.com/in/himprakash-deka-593806205" target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-linkedin fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2"
+        href="https://www.facebook.com/profile.php?id=100071066930198" target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-facebook fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://www.instagram.com/him.pro_d/"
+        target="_blank">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-instagram fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" target="_blank"
+        href="mailto:info@himdek.com">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-envelope-fill fs-3"></i>
+        </div>
       </a>
     </div>
   </nav>
@@ -113,7 +147,7 @@
             <div class="card shadow bg-primary-subtle p-3 border border-0 rounded-5" data-tilt data-tilt-reverse="true"
               data-tilt-full-page-listening>
               <div class="card-body layer-75">
-                <h4 class="card-title pb-2 fw-bold transform-origin-left hiddenX">About Me</h4>
+                <h4 class="card-title pb-2 fw-bold transform-origin-left hiddenX">Personal Info</h4>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-transparent">
                     <span class="d-flex align-items-center justify-items-start text-body ff-mono">
@@ -166,9 +200,9 @@
               <div class="card-body layer-75">
                 <span class="d-flex align-items-center">
                   <a href="https://github.com/HimDek">
-                      <span class="px-2 me-2 octicon octicon-mark-github-16 fs-1 shrunk"></span>
+                    <span class="px-2 me-2 octicon octicon-mark-github-16 fs-1 shrunk"></span>
                   </a>
-                  <h4 class="card-title pb-0 mb-0 fw-bold transform-origin-left transform-origin-left hiddenX">My GitHub
+                  <h4 class="card-title pb-0 mb-0 fw-bold transform-origin-left hiddenX">My GitHub
                     Stats</h4>
                 </span>
                 <ul class="list-group list-group-flush stats">
@@ -228,6 +262,44 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-4">
+      <div class="d-flex align-items-center justify-content-around scroll-banner-right" style="width: 400vh;">
+        <h1 class="display-2">About Me</h1>
+        <h1 class="display-2">About Me</h1>
+        <h1 class="display-2">About Me</h1>
+        <h1 class="display-2">About Me</h1>
+      </div>
+
+      <div class="px-0 px-sm-5 mx-1 mx-sm-5">
+        <div class="d-flex align-items-center justify-content-start py-4">
+          <p class="font-monospace fs-5 text-start slide-out-right" style="max-width: 80ch">With a robust background
+            in backend
+            development
+            utilizing Django and Django REST Framework, complemented by application development skills in Flutter,
+            Visual
+            C++, and C#, I bring a wealth of experience to the table.
+          </p>
+        </div>
+        <div class="d-flex align-items-center justify-content-end py-4">
+          <p class="font-monospace fs-5 text-start slide-out-left" style="max-width: 40ch">
+            Proficient in Python, C, C++, and Dart, I excel in seamlessly integrating APIs and bridging the gap
+            between
+            backend systems and client interfaces.</p>
+        </div>
+        <div class="d-flex align-items-center justify-content-start py-4">
+          <p class="font-monospace fs-5 text-start slide-out-right" style="max-width: 60ch">My proficiency extends to
+            AWS services such
+            as
+            EC2, S3, and RDS, coupled with adept domain management, cloud deployment, CLI, and Linux skills.</p>
+        </div>
+        <div class="d-flex align-items-center justify-content-end py-4">
+          <p class="font-monospace fs-5 text-start slide-out-left" style="max-width: 40ch">Passionate about technology
+            and committed to
+            delivering excellence, I thrive in the ever-evolving landscape of software development.</p>
         </div>
       </div>
     </div>
@@ -359,6 +431,7 @@
   <section id="repostab">
     <div class="sticky-top below-nav">
       <span>
+        <div class="topedge bg-accent-subtle"></div>
         <div class="inverted-topleft-corner bg-accent-subtle"></div>
         <div class="inverted-topright-corner bg-accent-subtle"></div>
         <div class="leftedge bg-accent-subtle"></div>
@@ -384,6 +457,7 @@
   <section id="giststab">
     <div class="sticky-top below-nav">
       <span>
+        <div class="topedge bg-accent-subtle"></div>
         <div class="inverted-topleft-corner bg-accent-subtle"></div>
         <div class="inverted-topright-corner bg-accent-subtle"></div>
         <div class="leftedge bg-accent-subtle"></div>
@@ -408,7 +482,7 @@
   </section>
 
   <footer>
-    <div class="d-flex align-items-center justify-content-center" style="gap: 1rem">
+    <div class="d-flex align-items-center justify-content-center gap-1">
       <a class="text-decoration-none text-body wobbly-button-container p-2" href="https://github.com/HimDek"
         target="_blank">
         <div class="px-2 wobbly-button">

@@ -12345,7 +12345,7 @@ textarea.form-control-lg {
 }
 body {
   margin: 0px;
-  min-width: 420px;
+  min-width: 370px;
   font-size: 1rem;
 }
 
@@ -12917,6 +12917,7 @@ a:hover .shadow-box {
 .inverted-bottomleft-corner,
 .inverted-bottomright-corner,
 .bottomedge,
+.topedge,
 .leftedge,
 .rightedge {
   position: relative;
@@ -12933,6 +12934,7 @@ a:hover .shadow-box {
 
 .inverted-topleft-corner,
 .inverted-topright-corner,
+.topedge,
 .leftedge,
 .rightedge {
   top: 0;
@@ -12973,6 +12975,12 @@ a:hover .shadow-box {
   margin-top: -2rem;
 }
 
+.topedge {
+  height: 3.6rem;
+  width: 100%;
+  left: 0rem;
+}
+
 .bottomedge {
   height: 1rem;
   width: 100%;
@@ -12987,7 +12995,6 @@ a:hover .shadow-box {
 }
 
 .below-nav {
-  top: 3.59rem;
   z-index: 1000;
 }
 
