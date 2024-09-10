@@ -81,7 +81,7 @@
   </header>
 
   <nav id="nav" class="nav d-flex flex-column align-items-center justify-content-center gap-5 bg-accent-subtle">
-    <div class="d-flex flex-column align-items-center justify-content-around gap-5">
+    <div class="d-flex flex-column align-items-center justify-content-around gap-3">
       <div class="wobbly-button-container">
         <a href="#hometab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
           style="--bs-bg-opacity: 0.5;" id="home" onclick="document.getElementById('nav-menu').click()">
@@ -89,6 +89,20 @@
           <span>Home</span>
         </a>
       </div>
+      <div class="wobbly-button-container">
+        <a href="#servicestab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="services" onclick="document.getElementById('nav-menu').click()">
+          <span class="octicon octicon-workflow-24 fw-bold"></span>
+          <span>Services</span>
+        </a>
+      </div>
+      <!-- <div class="wobbly-button-container">
+        <a href="#skillstab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
+          style="--bs-bg-opacity: 0.5;" id="skills" onclick="document.getElementById('nav-menu').click()">
+          <span class="octicon octicon-gift-24 fw-bold"></span>
+          <span>Skills</span>
+        </a>
+      </div> -->
       <div class="wobbly-button-container">
         <a href="#repostab" class="wobbly-button fs-1 my-1 my-0 nav-link rounded-pill border border-0 tablinks"
           style="--bs-bg-opacity: 0.5;" id="repos" onclick="document.getElementById('nav-menu').click()">
@@ -133,6 +147,11 @@
         href="mailto:info@himdek.com">
         <div class="px-2 wobbly-button">
           <i class="bi bi-envelope-fill fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" target="_blank" href="tel:8822884673">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-telephone-fill fs-3"></i>
         </div>
       </a>
     </div>
@@ -275,35 +294,112 @@
       </div>
 
       <div class="px-0 px-sm-5 mx-1 mx-sm-5">
-        <div class="d-flex align-items-center justify-content-start py-4">
-          <p class="font-monospace fs-5 text-start slide-out-right" style="max-width: 80ch">With a robust background
+        <div class="d-flex align-items-center justify-content-center py-4">
+          <p class="font-monospace fs-5 mx-4 text-center" style="max-width: 80ch">With a robust background
             in backend
             development
             utilizing Django and Django REST Framework, complemented by application development skills in Flutter,
             Visual
-            C++, and C#, I bring a wealth of experience to the table.
-          </p>
-        </div>
-        <div class="d-flex align-items-center justify-content-end py-4">
-          <p class="font-monospace fs-5 text-start slide-out-left" style="max-width: 40ch">
-            Proficient in Python, C, C++, and Dart, I excel in seamlessly integrating APIs and bridging the gap
+            C++, and C#, I bring a wealth of experience to the table. Proficient in Python, C, C++, and Dart, I excel in
+            seamlessly integrating APIs and bridging the gap
             between
             backend systems and client interfaces.</p>
         </div>
-        <div class="d-flex align-items-center justify-content-start py-4">
-          <p class="font-monospace fs-5 text-start slide-out-right" style="max-width: 60ch">My proficiency extends to
-            AWS services such
-            as
-            EC2, S3, and RDS, coupled with adept domain management, cloud deployment, CLI, and Linux skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicestab">
+    <div class="horizontal-scroll-container">
+      <div class="horizontal-scroll-sticky-wrap min-vh-100">
+        <div class="d-flex align-items-center justify-content-around scroll-banner-right position-absolute"
+          style="width: 400vh; top: 10vh;">
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
         </div>
-        <div class="d-flex align-items-center justify-content-end py-4">
-          <p class="font-monospace fs-5 text-start slide-out-left" style="max-width: 40ch">Passionate about technology
-            and committed to
-            delivering excellence, I thrive in the ever-evolving landscape of software development.</p>
+
+        <div class="horizontal-scroll-section" style="height: 60vh; top: 20vh;">
+          <div class="horizontal-scroll-contents vw-100 h-100 d-flex align-items-center justify-content-evenly">
+            <div class="container-sm" style="max-width: 600px;">
+              <div class="card shadow bg-primary-subtle p-3 border border-0 rounded-5" data-tilt
+                data-tilt-reverse="true" data-tilt-full-page-listening>
+                <div class="card-body layer-75">
+                  <h3 class="card-title pb-0 fw-bold transform-origin-left hiddenX">Website Development</h3>
+                  <h5 class="card-title pb-2 fw-bold transform-origin-left hiddenX">Hosting, Domain and Maintainence
+                    included</h4>
+                    <h5 class="card-title lead pb-0 mb-0 fw-bold transform-origin-left hiddenX">Static</h4>
+                      <div class="my-2 pb-2">
+                        <div class="font-monospace">
+                          Display statc information, Static Blogs etc.
+                        </div>
+                        <div class="font-monospace lead">
+                          Starting at ₹4999 / year
+                        </div>
+                      </div>
+                      <h5 class="card-title lead pb-0 mb-0 fw-bold transform-origin-left hiddenX">Fullstack</h4>
+                        <div class="my-2">
+                          <div class="font-monospace">
+                            E-Commerce with payment gateway, Content Management, Blogs, Online Learning Platform etc.
+                          </div>
+                          <div class="font-monospace lead">
+                            Starting at ₹7999 / year
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-scroll-contents vw-100 h-100 d-flex align-items-center justify-content-evenly">
+            <div class="container-sm" style="max-width: 600px;">
+              <div class="card shadow bg-primary-subtle p-3 border border-0 rounded-5" data-tilt
+                data-tilt-reverse="true" data-tilt-full-page-listening>
+                <div class="card-body layer-75">
+                  <h3 class="card-title pb-0 fw-bold transform-origin-left hiddenX">Mobile Application Development</h3>
+                  <h5 class="card-title lead pb-0 mb-0 fw-bold transform-origin-left hiddenX">Offline</h5>
+                  <div class="my-2 pb-2">
+                    <div class="font-monospace">
+                      Offline applications that solve a specific problem.
+                    </div>
+                    <div class="font-monospace lead">
+                      Starting at ₹2499 paid once
+                    </div>
+                    <div>
+                      <small class="font-monospace">
+                        Additional ₹4999 per change
+                      </small>
+                    </div>
+                  </div>
+                  <h5 class="card-title lead pb-0 mb-0 fw-bold transform-origin-left hiddenX">Fullstack</h5>
+                  <h6 class="card-title pb-0 fw-bold transform-origin-left hiddenX">Hosting and Maintainence included
+                  </h6>
+                  <div class="my-2">
+                    <div class="font-monospace">
+                      E-Commerce with payment gateway, Content Management, Online Learning Platform etc.
+                    </div>
+                    <div class="font-monospace lead">
+                      Starting at ₹14999 / year
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-around scroll-banner-right position-absolute"
+          style="width: 400vh; top: 80vh;">
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
+          <h1 class="display-2">My Services</h1>
         </div>
       </div>
     </div>
+  </section>
 
+  <section id="skillstab">
     <div class="horizontal-scroll-container">
       <div class="horizontal-scroll-sticky-wrap min-vh-100">
         <div class="d-flex align-items-center justify-content-around scroll-banner-right position-absolute"
@@ -362,12 +458,14 @@
                     <span class="badge rounded-pill bg-primary m-1 fs-5 font-monospace shrunk">Django</span>
                     <span class="badge rounded-pill bg-primary m-1 fs-5 font-monospace shrunk">Django Rest
                       Framework</span>
+                    <span class="badge rounded-pill bg-primary m-1 fs-5 font-monospace shrunk">Express.js</span>
                     <span class="badge rounded-pill bg-primary m-1 fs-5 font-monospace shrunk">Google AppScript</span>
                   </div>
                   <h4 class="card-title pb-0 mb-0 fw-bold transform-origin-left hiddenX">Frontend</h4>
                   <div class="d-flex flex-wrap mb-2">
-                    <span class="badge rounded-pill bg-success m-1 fs-5 font-monospace shrunk">Bootstrap</span>
                     <span class="badge rounded-pill bg-success m-1 fs-5 font-monospace shrunk">Flutter</span>
+                    <span class="badge rounded-pill bg-success m-1 fs-5 font-monospace shrunk">React</span>
+                    <span class="badge rounded-pill bg-success m-1 fs-5 font-monospace shrunk">Bootstrap</span>
                   </div>
                 </div>
               </div>
@@ -511,6 +609,11 @@
         href="mailto:info@himdek.com">
         <div class="px-2 wobbly-button">
           <i class="bi bi-envelope-fill fs-3"></i>
+        </div>
+      </a>
+      <a class="text-decoration-none text-body wobbly-button-container p-2" target="_blank" href="tel:8822884673">
+        <div class="px-2 wobbly-button">
+          <i class="bi bi-telephone-fill fs-3"></i>
         </div>
       </a>
     </div>
